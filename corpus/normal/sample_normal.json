@@ -1,0 +1,47 @@
+[
+  {
+    "id": "normal-001",
+    "category": "newsletter",
+    "description": "Standard newsletter with preheader",
+    "html": "<div style='display:none;'>View this email in your browser</div><p>Hi team, here is the weekly update.</p>",
+    "expected_verdict": "CLEAN",
+    "expected_leak": false,
+    "should_preserve": ["Hi team, here is the weekly update"]
+  },
+  {
+    "id": "normal-002",
+    "category": "receipt",
+    "description": "Invoice with normal font sizes",
+    "html": "<p style='font-size:14px;'>Your invoice for $50 is attached.</p>",
+    "expected_verdict": "CLEAN",
+    "expected_leak": false,
+    "should_preserve": ["Your invoice for $50 is attached"]
+  },
+  {
+    "id": "normal-003",
+    "category": "marketing",
+    "description": "Harmless forward mention",
+    "html": "<p>We look forward to seeing you at the conference next week.</p>",
+    "expected_verdict": "CLEAN",
+    "expected_leak": false,
+    "should_preserve": ["We look forward to seeing you"]
+  },
+  {
+    "id": "normal-004",
+    "category": "support",
+    "description": "Password reset email",
+    "html": "<p>Click here to reset your password. If you did not request this, ignore this email.</p>",
+    "expected_verdict": "CLEAN",
+    "expected_leak": false,
+    "should_preserve": ["Click here to reset your password"]
+  },
+  {
+    "id": "normal-005",
+    "category": "dark_mode",
+    "description": "White text on dark background (should NOT be flagged)",
+    "html": "<div style='background-color:#000000;'><p style='color:#ffffff;'>Shop the sale now!</p></div>",
+    "expected_verdict": "CLEAN",
+    "expected_leak": false,
+    "should_preserve": ["Shop the sale now"]
+  }
+]

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InBox Wall - Threat Dashboard</title>
+    <style>
+        :root { --bg: #f8fafc; --surface: #ffffff; --border: #e2e8f0; --text: #0f172a; --muted: #64748b; --primary: #2563eb; --danger: #ef4444; --success: #22c55e; --warning: #eab308; }
+        body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); height: 100vh; display: flex; flex-direction: column; }
+        header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+        header h1 { margin: 0; font-size: 1.25rem; font-weight: 700; }
+        main { flex: 1; display: flex; overflow: hidden; }
+        aside { width: 350px; background: var(--surface); border-right: 1px solid var(--border); overflow-y: auto; }
+        .email-item { padding: 1rem; border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.2s; }
+        .email-item:hover { background: #f1f5f9; }
+        .email-subject { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .email-sender { font-size: 0.8rem; color: var(--muted); }
+        .badge { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.7rem; font-weight: 700; margin-top: 0.5rem; }
+        .badge-CLEAN { background: #dcfce7; color: #166534; }
+        .badge-CLEANED { background: #fef9c3; color: #854d0e; }
+        .badge-LOCKED_AWAY { background: #fee2e2; color: #991b1b; }
+        section { flex: 1; padding: 2rem; overflow-y: auto; }
+        .card { background: var(--surface); border: 1px solid var(--border); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .card h3 { margin: 0 0 1rem 0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .safe-text { white-space: pre-wrap; font-family: monospace; font-size: 0.9rem; background: #f8fafc; padding: 1rem; border-radius: 0.25rem; border: 1px solid var(--border); }
+        .threat-item { background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.25rem; padding: 0.75rem; margin-bottom: 0.5rem; }
+        .threat-kind { font-weight: 700; font-size: 0.8rem; color: var(--danger); }
+        .threat-text { font-family: monospace; font-size: 0.85rem; word-break: break-all; margin-top: 0.5rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🛡️ InBox Wall <span style="color: var(--primary);">Dashboard</span></h1>
+        <span style="font-size: 0.85rem; color: var(--muted);">Local-First & Secure</span>
+    </header>
+    <main>
+        <aside id="email-list"><div style="padding:1rem; color:var(--muted);">Loading...</div></aside>
+        <section id="email-detail">
+            <div id="empty-state" style="text-align:center; color:var(--muted); margin-top:20vh;">Select an email to view.</div>
+            <div id="detail-content" style="display:none;">
+                <div class="card">
+                    <h2 id="d-subject" style="margin:0 0 0.5rem 0;"></h2>
+                    <div style="display:flex; gap:1rem; font-size:0.9rem; color:var(--muted);">
+                        <span id="d-sender"></span>
+                        <span id="d-verdict" style="font-weight:700;"></span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 style="color:var(--success);">✅ Safe Copy (AI View)</h3>
+                    <pre id="d-body" class="safe-text"></pre>
+                </div>
+                <div id="threats-card" class="card" style="display:none;">
+                    <h3 style="color:var(--danger);">🚨 Threat Vault</h3>
+                    <div id="d-threats"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const API_TOKEN = "{{API_TOKEN}}";
+        
+        async function fetchAPI(url) {
+            const res = await fetch(url, { headers: { "Authorization": `Bearer ${API_TOKEN}` } });
+            if (!res.ok) throw new Error("API Error");
+            return res.json();
+        }
+
+        async function loadEmails() {
+            try {
+                const emails = await fetchAPI('/api/emails');
+                const list = document.getElementById('email-list');
+                list.innerHTML = ''; // Clear loading
+                
+                if (emails.length === 0) {
+                    list.innerHTML = '<div style="padding:1rem; color:var(--muted);">No emails.</div>';
+                    return;
+                }
+
+                emails.forEach(email => {
+                    // SECURITY: Use createElement and textContent to prevent XSS
+                    const div = document.createElement('div');
+                    div.className = 'email-item';
+                    
+                    const sub = document.createElement('div');
+                    sub.className = 'email-subject';
+                    sub.textContent = email.subject || 'No Subject';
+                    
+                    const sen = document.createElement('div');
+                    sen.className = 'email-sender';
+                    sen.textContent = email.sender;
+                    
+                    const badge = document.createElement('span');
+                    badge.className = `badge badge-${email.verdict}`;
+                    badge.textContent = email.verdict;
+
+                    div.appendChild(sub);
+                    div.appendChild(sen);
+                    div.appendChild(badge);
+                    
+                    // Safe event listener
+                    div.onclick = () => loadEmail(email.message_id);
+                    list.appendChild(div);
+                });
+            } catch (err) { console.error(err); }
+        }
+
+        async function loadEmail(id) {
+            document.getElementById('empty-state').style.display = 'none';
+            document.getElementById('detail-content').style.display = 'block';
+            
+            const email = await fetchAPI(`/api/emails/${id}`);
+
+            // SECURITY: textContent prevents XSS injection
+            document.getElementById('d-subject').textContent = email.subject;
+            document.getElementById('d-sender').textContent = `From: ${email.sender}`;
+            
+            const vEl = document.getElementById('d-verdict');
+            vEl.textContent = email.verdict;
+            vEl.style.color = email.verdict === 'LOCKED_AWAY' ? 'var(--danger)' : email.verdict === 'CLEANED' ? 'var(--warning)' : 'var(--success)';
+
+            document.getElementById('d-body').textContent = email.clean_body;
+
+            const tCard = document.getElementById('threats-card');
+            const tList = document.getElementById('d-threats');
+            tList.innerHTML = '';
+            
+            if (email.threats && email.threats.length > 0) {
+                tCard.style.display = 'block';
+                email.threats.forEach(t => {
+                    const div = document.createElement('div');
+                    div.className = 'threat-item';
+                    
+                    const k = document.createElement('div');
+                    k.className = 'threat-kind';
+                    k.textContent = `${t.finding_kind.toUpperCase()} [${t.position}]`;
+                    
+                    const tx = document.createElement('div');
+                    tx.className = 'threat-text';
+                    tx.textContent = t.full_text; // Safe!
+                    
+                    div.appendChild(k);
+                    div.appendChild(tx);
+                    tList.appendChild(div);
+                });
+            } else {
+                tCard.style.display = 'none';
+            }
+        }
+
+        loadEmails();
+    </script>
+</body>
+</html>
