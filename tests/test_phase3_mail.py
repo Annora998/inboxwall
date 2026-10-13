@@ -28,7 +28,6 @@ def test_phase3():
         
         results = source.fetch_recent(limit=5)
         
-        # Verify mark_seen=False was passed
         call_kwargs = mock_instance.fetch.call_args[1]
         assert call_kwargs.get("mark_seen") == False, "mark_seen must be False!"
         assert results[0]["message_id"] == "<unique-123@test.com>", "Should use Message-ID, not UID!"
@@ -53,9 +52,12 @@ def test_phase3():
     
     assert stats["processed"] == 1, "Should process 1 email"
     
-    # Verify the safe text is stored as pure, literal text (which is safe because 
-    # the frontend uses textContent, not innerHTML) and versioned.
-    safe_email = mock_db.get_safe_email("<msg-002>")
+    # FIX: Query directly by message_id since get_safe_email now expects an integer ID
+    with mock_db._get_connection(mock_db.safe_db_path, read_only=True) as conn:
+        cursor = conn.execute("SELECT * FROM safe_emails WHERE message_id = ?", ("<msg-002>",))
+        safe_email = cursor.fetchone()
+
+    assert safe_email is not None, "Email <msg-002> was not saved to the database!"
     assert "<script>" in safe_email["clean_body"], "Plain text should be stored as literal text."
     assert safe_email["rules_version"] == RULES_VERSION, "Rules version must be tracked!"
     print("[PASS] Processor: Plain text is safely stored as literal text and versioned.")
