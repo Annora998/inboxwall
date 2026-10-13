@@ -1,18 +1,3 @@
-
-3. Click **File > Save As...**
-4. Navigate to: `E:\InBoxWall\backend`
-5. Change **"Save as type"** to **"All Files (*.*)"**
-6. In **"File name"**, type: `"README.md"` (with the quotes!)
-7. Click **Save**.
-
----
-
-### **File 2: PRIVACY.md (Your Privacy Promise)**
-
-1. Open a **new Notepad** window.
-2. Copy this exact text:
-
-```markdown
 # Privacy Policy
 
 ## Data Collection
