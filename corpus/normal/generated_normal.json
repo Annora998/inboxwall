@@ -1,0 +1,5093 @@
+[
+  {
+    "id": "normal-gen-0000",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 72: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0001",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Lee is confirmed for 2026-11-16 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0002",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Stark Ind.</p><p>Here is your receipt for $461.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0003",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to API Access will renew on 2026-11-07.</p><p>Amount: $126.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0004",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Chris,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0005",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA293 to Toronto is confirmed for 2026-11-09.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0006",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 67: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0007",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #7739</h3><p>Dear Taylor, please find attached your invoice for Premium Plan.</p><p>Total due: $179.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0008",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your API Access account from Building B.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0009",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-24 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0010",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 26: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0011",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 70% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0012",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Sam, your order #94223 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0013",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Acme Corp.</p><p>Here is your receipt for $29.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0014",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 72% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0015",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Jordan, your order #79667 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0016",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 30% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0017",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to API Access will renew on 2026-11-13.</p><p>Amount: $206.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0018",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 84% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0019",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Lee is confirmed for 2026-11-15 at 3:30 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0020",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Casey,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0021",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #4090</h3><p>Dear Morgan, please find attached your invoice for API Access.</p><p>Total due: $121.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0022",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Enterprise License will renew on 2026-11-06.</p><p>Amount: $146.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0023",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Sam, your order #32021 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0024",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Stark Ind.</p><p>Here is your receipt for $116.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0025",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 83: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0026",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0027",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 10:00 AM in Building B.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0028",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Taylor,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0029",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA135 to Berlin is confirmed for 2026-11-05.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0030",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #5916</h3><p>Dear Taylor, please find attached your invoice for Cloud Storage.</p><p>Total due: $174.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0031",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #8122</h3><p>Dear Jordan, please find attached your invoice for Cloud Storage.</p><p>Total due: $492.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0032",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Jordan, your order #23532 has shipped today.</p><p>Track it at market.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0033",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q1 all-hands meeting is scheduled for 2026-11-01.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0034",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Casey, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0035",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Stark Ind! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0036",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Sam, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0037",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 44% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0038",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your March statement is now available.</p><p>Log in to view your balance of $3091.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0039",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA557 to Toronto is confirmed for 2026-11-12.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0040",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 3:30 PM in Room 4.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0041",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #6522</h3><p>Dear Casey, please find attached your invoice for Premium Plan.</p><p>Total due: $173.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0042",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Enterprise License account from Room 4.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0043",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-25 at 3:30 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0044",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your November statement is now available.</p><p>Log in to view your balance of $2229.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0045",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Wayne Ent.</p><p>Here is your receipt for $480.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0046",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Sam, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0047",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Acme Corp! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0048",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 36: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0049",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Cloud Storage will renew on 2026-11-04.</p><p>Amount: $493.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0050",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Morgan, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0051",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0052",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Sam,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0053",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0054",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q4 all-hands meeting is scheduled for 2026-11-26.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0055",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to API Access will renew on 2026-11-06.</p><p>Amount: $244.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0056",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Riley,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0057",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Morgan,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0058",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Globex! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0059",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Umbrella Corp.</p><p>Here is your receipt for $48.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0060",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 61% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0061",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-05 at 10:00 AM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0062",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Globex! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0063",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Wayne Ent.</p><p>Here is your receipt for $307.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0064",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q2 all-hands meeting is scheduled for 2026-11-06.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0065",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Wayne Ent! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0066",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your February statement is now available.</p><p>Log in to view your balance of $2555.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0067",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 10:00 AM in Room 4.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0068",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Lee is confirmed for 2026-11-03 at 3:30 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0069",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 70: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0070",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #2499</h3><p>Dear Taylor, please find attached your invoice for API Access.</p><p>Total due: $470.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0071",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Lee is confirmed for 2026-11-19 at 10:00 AM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0072",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Taylor, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0073",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA348 to Sydney is confirmed for 2026-11-26.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0074",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 75% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0075",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Casey, your order #16304 has shipped today.</p><p>Track it at market.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0076",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Acme Corp.</p><p>Here is your receipt for $194.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0077",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Wayne Ent! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0078",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Premium Plan account from Room 4.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0079",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your January statement is now available.</p><p>Log in to view your balance of $2382.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0080",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your API Access account from Room 4.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0081",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0082",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-11 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0083",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Chris, your order #97574 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0084",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your November statement is now available.</p><p>Log in to view your balance of $4675.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0085",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Jordan,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0086",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q2 all-hands meeting is scheduled for 2026-11-16.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0087",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 27% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0088",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Globex! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0089",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 26% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0090",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Enterprise License will renew on 2026-11-05.</p><p>Amount: $182.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0091",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Casey,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0092",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Sam, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0093",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your November statement is now available.</p><p>Log in to view your balance of $4520.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0094",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q2 all-hands meeting is scheduled for 2026-11-21.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0095",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA818 to Toronto is confirmed for 2026-11-24.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0096",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your March statement is now available.</p><p>Log in to view your balance of $3469.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0097",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Casey,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0098",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Riley, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0099",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #6142</h3><p>Dear Taylor, please find attached your invoice for Premium Plan.</p><p>Total due: $331.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0100",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Lee is confirmed for 2026-11-06 at 10:00 AM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0101",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Initech.</p><p>Here is your receipt for $311.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0102",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #7671</h3><p>Dear Riley, please find attached your invoice for Premium Plan.</p><p>Total due: $127.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0103",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-16 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0104",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your January statement is now available.</p><p>Log in to view your balance of $4056.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0105",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 29: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0106",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-12 at 10:00 AM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0107",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Acme Corp.</p><p>Here is your receipt for $315.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0108",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 91: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0109",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #6280</h3><p>Dear Jordan, please find attached your invoice for Premium Plan.</p><p>Total due: $255.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0110",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your January statement is now available.</p><p>Log in to view your balance of $3226.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0111",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Cloud Storage will renew on 2026-11-13.</p><p>Amount: $369.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0112",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to API Access will renew on 2026-11-12.</p><p>Amount: $324.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0113",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Wayne Ent.</p><p>Here is your receipt for $437.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0114",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 14: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0115",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Jordan,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0116",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Globex! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0117",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Riley, your order #61040 has shipped today.</p><p>Track it at market.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0118",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Lee is confirmed for 2026-11-22 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0119",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0120",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 81% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0121",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Lee is confirmed for 2026-11-20 at 3:30 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0122",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 80: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0123",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-26 at 3:30 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0124",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Initech! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0125",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q4 all-hands meeting is scheduled for 2026-11-03.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0126",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-02 at 3:30 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0127",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Initech! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0128",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 62: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0129",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Sam, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0130",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Sam, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0131",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Cloud Storage account from Zoom.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0132",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Stark Ind! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0133",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Stark Ind! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0134",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q3 all-hands meeting is scheduled for 2026-11-05.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0135",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Cloud Storage account from Building B.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0136",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 3:30 PM in Building B.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0137",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Casey, your order #72685 has shipped today.</p><p>Track it at market.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0138",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #8430</h3><p>Dear Taylor, please find attached your invoice for API Access.</p><p>Total due: $44.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0139",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA514 to Toronto is confirmed for 2026-11-07.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0140",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Premium Plan will renew on 2026-11-15.</p><p>Amount: $252.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0141",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your October statement is now available.</p><p>Log in to view your balance of $2612.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0142",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Morgan,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0143",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 55: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0144",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q4 all-hands meeting is scheduled for 2026-11-07.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0145",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Globex.</p><p>Here is your receipt for $387.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0146",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Taylor,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0147",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 76% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0148",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Taylor, your order #34554 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0149",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Riley,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0150",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q2 all-hands meeting is scheduled for 2026-11-26.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0151",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Globex! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0152",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Enterprise License account from Room 4.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0153",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Globex.</p><p>Here is your receipt for $305.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0154",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Casey,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0155",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Premium Plan account from Room 4.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0156",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Acme Corp.</p><p>Here is your receipt for $377.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0157",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Enterprise License will renew on 2026-11-21.</p><p>Amount: $27.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0158",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Taylor, your order #66239 has shipped today.</p><p>Track it at market.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0159",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-09 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0160",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Morgan, your order #48962 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0161",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Premium Plan will renew on 2026-11-26.</p><p>Amount: $457.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0162",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q4 all-hands meeting is scheduled for 2026-11-06.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0163",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Premium Plan will renew on 2026-11-20.</p><p>Amount: $259.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0164",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 66% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0165",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Riley, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0166",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Cloud Storage will renew on 2026-11-06.</p><p>Amount: $207.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0167",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Taylor, your order #62534 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0168",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0169",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Sam, your order #75392 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0170",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Taylor, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0171",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 44: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0172",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q1 all-hands meeting is scheduled for 2026-11-14.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0173",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Initech! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0174",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-09 at 10:00 AM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0175",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0176",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA591 to Toronto is confirmed for 2026-11-26.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0177",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Umbrella Corp! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0178",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Sam,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0179",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Globex! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0180",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Jordan, your order #17742 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0181",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 47% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0182",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Alex, your order #60028 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0183",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA997 to Sydney is confirmed for 2026-11-15.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0184",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Lee is confirmed for 2026-11-09 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0185",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Casey, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0186",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Chris,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0187",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q3 all-hands meeting is scheduled for 2026-11-02.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0188",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Chris, your order #66739 has shipped today.</p><p>Track it at market.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0189",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 41% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0190",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Premium Plan account from Building B.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0191",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Riley,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0192",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Chris, your order #21528 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0193",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Premium Plan will renew on 2026-11-27.</p><p>Amount: $315.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0194",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 87: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0195",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0196",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Acme Corp.</p><p>Here is your receipt for $26.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0197",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 10:00 AM in Room 4.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0198",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-26 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0199",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #7701</h3><p>Dear Alex, please find attached your invoice for Enterprise License.</p><p>Total due: $248.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0200",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Taylor, your order #99887 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0201",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Wayne Ent! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0202",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-03 at 3:30 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0203",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Morgan, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0204",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Cloud Storage will renew on 2026-11-24.</p><p>Amount: $235.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0205",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Morgan,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0206",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Umbrella Corp.</p><p>Here is your receipt for $318.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0207",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Initech! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0208",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA354 to Tokyo is confirmed for 2026-11-07.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0209",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA765 to Berlin is confirmed for 2026-11-27.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0210",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 2:00 PM in Building B.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0211",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Cloud Storage will renew on 2026-11-01.</p><p>Amount: $336.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0212",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 30% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0213",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Cloud Storage account from Zoom.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0214",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Morgan,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0215",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA214 to Sydney is confirmed for 2026-11-03.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0216",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Jordan, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0217",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Premium Plan account from Building B.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0218",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Globex! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0219",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Umbrella Corp.</p><p>Here is your receipt for $358.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0220",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Taylor, your order #99369 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0221",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Casey, your order #18730 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0222",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Casey, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0223",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 31: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0224",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your November statement is now available.</p><p>Log in to view your balance of $337.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0225",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #5401</h3><p>Dear Taylor, please find attached your invoice for Premium Plan.</p><p>Total due: $345.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0226",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #7418</h3><p>Dear Casey, please find attached your invoice for Premium Plan.</p><p>Total due: $369.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0227",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA968 to New York is confirmed for 2026-11-21.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0228",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA781 to Toronto is confirmed for 2026-11-21.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0229",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Wayne Ent! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0230",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Wayne Ent.</p><p>Here is your receipt for $164.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0231",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Casey, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0232",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 3:30 PM in Building B.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0233",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #6994</h3><p>Dear Riley, please find attached your invoice for Enterprise License.</p><p>Total due: $398.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0234",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0235",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 2:00 PM in Room 4.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0236",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Stark Ind! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0237",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Enterprise License will renew on 2026-11-26.</p><p>Amount: $420.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0238",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 48% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0239",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your October statement is now available.</p><p>Log in to view your balance of $4876.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0240",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your API Access account from Room 4.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0241",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Acme Corp! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0242",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Acme Corp.</p><p>Here is your receipt for $216.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0243",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Jordan, your order #97232 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0244",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 10:00 AM in Building B.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0245",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 12: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0246",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 20% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0247",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Enterprise License will renew on 2026-11-17.</p><p>Amount: $141.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0248",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your October statement is now available.</p><p>Log in to view your balance of $2553.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0249",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q4 all-hands meeting is scheduled for 2026-11-05.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0250",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 3:30 PM in Zoom.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0251",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 38: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0252",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 2:00 PM in Building B.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0253",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 10:00 AM in Building B.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0254",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Jordan, your order #48316 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0255",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #6222</h3><p>Dear Morgan, please find attached your invoice for Premium Plan.</p><p>Total due: $286.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0256",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 11% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0257",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Taylor, your order #63819 has shipped today.</p><p>Track it at market.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0258",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #4259</h3><p>Dear Chris, please find attached your invoice for Cloud Storage.</p><p>Total due: $84.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0259",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 47: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0260",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Riley,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0261",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 10:00 AM in Room 4.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0262",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 67: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0263",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-27 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0264",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Jordan, your order #27384 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0265",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 69: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0266",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA244 to Toronto is confirmed for 2026-11-09.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0267",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Jordan,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0268",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 69: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0269",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #3016</h3><p>Dear Riley, please find attached your invoice for Enterprise License.</p><p>Total due: $310.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0270",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q1 all-hands meeting is scheduled for 2026-11-04.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0271",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 3:30 PM in Building B.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0272",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 44% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0273",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 83% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0274",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Acme Corp! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0275",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-08 at 10:00 AM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0276",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Acme Corp.</p><p>Here is your receipt for $89.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0277",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 88% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0278",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Alex, your order #81270 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0279",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your March statement is now available.</p><p>Log in to view your balance of $259.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0280",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA977 to Tokyo is confirmed for 2026-11-02.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0281",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #8291</h3><p>Dear Chris, please find attached your invoice for Premium Plan.</p><p>Total due: $122.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0282",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA477 to London is confirmed for 2026-11-06.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0283",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-18 at 10:00 AM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0284",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Wayne Ent! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0285",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Acme Corp.</p><p>Here is your receipt for $326.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0286",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q2 all-hands meeting is scheduled for 2026-11-03.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0287",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 36% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0288",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 2:00 PM in Building B.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0289",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA506 to London is confirmed for 2026-11-18.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0290",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Wayne Ent! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0291",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Chris, your order #31212 has shipped today.</p><p>Track it at market.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0292",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Enterprise License account from Room 4.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0293",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Chris, your order #21670 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0294",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Enterprise License account from Zoom.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0295",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 10:00 AM in Room 4.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0296",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-18 at 10:00 AM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0297",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Globex! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0298",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Premium Plan account from Zoom.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0299",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 43: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0300",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q2 all-hands meeting is scheduled for 2026-11-12.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0301",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Cloud Storage account from Room 4.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0302",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Stark Ind! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0303",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA602 to New York is confirmed for 2026-11-12.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0304",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q3 all-hands meeting is scheduled for 2026-11-20.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0305",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Morgan, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0306",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA500 to Berlin is confirmed for 2026-11-21.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0307",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 2:00 PM in Zoom.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0308",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0309",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 39% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0310",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your October statement is now available.</p><p>Log in to view your balance of $3013.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0311",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Casey, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0312",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q2 all-hands meeting is scheduled for 2026-11-11.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0313",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Wayne Ent! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0314",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Casey, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0315",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Taylor, your order #52921 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0316",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Initech! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0317",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Umbrella Corp.</p><p>Here is your receipt for $475.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0318",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Jordan, your order #87192 has shipped today.</p><p>Track it at market.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0319",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q4 all-hands meeting is scheduled for 2026-11-22.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0320",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Riley, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0321",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q3 all-hands meeting is scheduled for 2026-11-03.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0322",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-27 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0323",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0324",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-04 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0325",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Globex.</p><p>Here is your receipt for $202.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0326",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Sam,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0327",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to API Access will renew on 2026-11-05.</p><p>Amount: $248.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0328",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Premium Plan will renew on 2026-11-01.</p><p>Amount: $395.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0329",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Riley, your order #61203 has shipped today.</p><p>Track it at market.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0330",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Casey, your order #87457 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0331",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Globex.</p><p>Here is your receipt for $327.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0332",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Cloud Storage account from Room 4.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0333",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your November statement is now available.</p><p>Log in to view your balance of $4779.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0334",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Cloud Storage will renew on 2026-11-25.</p><p>Amount: $327.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0335",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA898 to London is confirmed for 2026-11-10.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0336",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Stark Ind! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0337",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Chris, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0338",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-13 at 10:00 AM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0339",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q2 all-hands meeting is scheduled for 2026-11-27.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0340",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 10:00 AM in Room 4.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0341",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Initech.</p><p>Here is your receipt for $140.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0342",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 68: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0343",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q1 all-hands meeting is scheduled for 2026-11-24.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0344",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-15 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0345",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0346",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Sam, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0347",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Taylor,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0348",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your January statement is now available.</p><p>Log in to view your balance of $4996.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0349",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your API Access account from Building B.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0350",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Sam, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0351",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Sam, your order #82504 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0352",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #5628</h3><p>Dear Jordan, please find attached your invoice for Premium Plan.</p><p>Total due: $188.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0353",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Cloud Storage will renew on 2026-11-07.</p><p>Amount: $113.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0354",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 46% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0355",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Umbrella Corp! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0356",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Jordan, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0357",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Chris,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0358",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA719 to Berlin is confirmed for 2026-11-02.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0359",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your API Access account from Building B.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0360",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Cloud Storage will renew on 2026-11-19.</p><p>Amount: $290.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0361",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-24 at 3:30 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0362",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your API Access account from Zoom.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0363",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 51% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0364",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Umbrella Corp.</p><p>Here is your receipt for $292.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0365",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-12 at 3:30 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0366",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 58% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0367",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Premium Plan account from Zoom.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0368",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 68% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0369",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Chris, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0370",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Taylor,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0371",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #3680</h3><p>Dear Casey, please find attached your invoice for Enterprise License.</p><p>Total due: $215.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0372",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #3659</h3><p>Dear Taylor, please find attached your invoice for Cloud Storage.</p><p>Total due: $84.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0373",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Morgan, your order #45592 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0374",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Riley, your order #35934 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0375",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Initech! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0376",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-10 at 3:30 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0377",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA873 to London is confirmed for 2026-11-24.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0378",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-18 at 3:30 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0379",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Umbrella Corp.</p><p>Here is your receipt for $439.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0380",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 50% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0381",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Taylor, your order #93738 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0382",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Cloud Storage account from Room 4.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0383",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 2:00 PM in Room 4.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0384",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Morgan,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0385",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 10:00 AM in Zoom.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0386",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Cloud Storage will renew on 2026-11-07.</p><p>Amount: $294.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0387",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Alex, your order #47592 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0388",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Casey,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0389",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-10 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0390",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 51% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0391",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Stark Ind.</p><p>Here is your receipt for $264.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0392",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #9823</h3><p>Dear Alex, please find attached your invoice for Premium Plan.</p><p>Total due: $333.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0393",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 56: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0394",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-24 at 3:30 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0395",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #2043</h3><p>Dear Alex, please find attached your invoice for Premium Plan.</p><p>Total due: $165.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0396",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your January statement is now available.</p><p>Log in to view your balance of $1790.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0397",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 38% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0398",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Jordan, your order #40185 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0399",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #5904</h3><p>Dear Alex, please find attached your invoice for Enterprise License.</p><p>Total due: $326.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0400",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 10:00 AM in Zoom.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0401",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 2:00 PM in Zoom.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0402",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA632 to London is confirmed for 2026-11-12.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0403",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q4 all-hands meeting is scheduled for 2026-11-14.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0404",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA268 to Tokyo is confirmed for 2026-11-22.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0405",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Taylor, your order #46016 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0406",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Taylor,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0407",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Morgan,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0408",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Umbrella Corp! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0409",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA861 to Berlin is confirmed for 2026-11-10.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0410",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your API Access account from Room 4.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0411",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Premium Plan account from Building B.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0412",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Morgan, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0413",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0414",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Casey, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0415",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Casey, your order #32773 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0416",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Riley, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0417",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Cloud Storage account from Building B.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0418",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-28 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0419",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #6373</h3><p>Dear Morgan, please find attached your invoice for Enterprise License.</p><p>Total due: $319.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0420",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #1238</h3><p>Dear Morgan, please find attached your invoice for Enterprise License.</p><p>Total due: $86.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0421",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your November statement is now available.</p><p>Log in to view your balance of $3882.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0422",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA255 to Berlin is confirmed for 2026-11-21.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0423",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Sam, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0424",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 49% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0425",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 2:00 PM in Room 4.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0426",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #4876</h3><p>Dear Chris, please find attached your invoice for API Access.</p><p>Total due: $330.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0427",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q4 all-hands meeting is scheduled for 2026-11-26.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0428",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 94: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0429",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 16: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0430",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Morgan,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0431",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 87% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0432",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA593 to New York is confirmed for 2026-11-20.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0433",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Globex! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0434",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your October statement is now available.</p><p>Log in to view your balance of $1368.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0435",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your October statement is now available.</p><p>Log in to view your balance of $1840.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0436",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #1527</h3><p>Dear Chris, please find attached your invoice for Cloud Storage.</p><p>Total due: $268.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0437",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Jordan,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0438",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Umbrella Corp.</p><p>Here is your receipt for $468.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0439",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Initech.</p><p>Here is your receipt for $417.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0440",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Morgan,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0441",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Taylor, your order #47810 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0442",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your January statement is now available.</p><p>Log in to view your balance of $3032.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0443",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Morgan, your order #22570 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0444",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 2:00 PM in Zoom.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0445",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 3:30 PM in Building B.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0446",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q2 all-hands meeting is scheduled for 2026-11-15.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0447",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 33% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0448",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q2 all-hands meeting is scheduled for 2026-11-05.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0449",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Morgan, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0450",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Acme Corp.</p><p>Here is your receipt for $494.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0451",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Initech.</p><p>Here is your receipt for $263.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0452",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to API Access will renew on 2026-11-16.</p><p>Amount: $447.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0453",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Initech.</p><p>Here is your receipt for $236.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0454",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-17 at 3:30 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0455",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Casey, your order #66069 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0456",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your January statement is now available.</p><p>Log in to view your balance of $4927.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0457",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Sam, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0458",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 19% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0459",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your November statement is now available.</p><p>Log in to view your balance of $3957.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0460",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Wayne Ent.</p><p>Here is your receipt for $273.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0461",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q1 all-hands meeting is scheduled for 2026-11-25.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0462",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Taylor, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0463",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA882 to Tokyo is confirmed for 2026-11-16.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0464",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Enterprise License account from Zoom.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0465",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #4120</h3><p>Dear Sam, please find attached your invoice for Enterprise License.</p><p>Total due: $419.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0466",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Acme Corp.</p><p>Here is your receipt for $61.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0467",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your February statement is now available.</p><p>Log in to view your balance of $3619.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0468",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Initech.</p><p>Here is your receipt for $383.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0469",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #5734</h3><p>Dear Chris, please find attached your invoice for API Access.</p><p>Total due: $52.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0470",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Chris, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0471",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Wayne Ent! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0472",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 27: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0473",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Taylor,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0474",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Cloud Storage will renew on 2026-11-25.</p><p>Amount: $36.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0475",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0476",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Stark Ind! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0477",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Morgan, your order #53672 has shipped today.</p><p>Track it at market.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0478",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 2:00 PM in Room 4.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0479",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q3 all-hands meeting is scheduled for 2026-11-22.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0480",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Lee is confirmed for 2026-11-15 at 10:00 AM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0481",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0482",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Umbrella Corp! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0483",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q4 all-hands meeting is scheduled for 2026-11-20.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0484",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Riley, your package is out for delivery today.</p><p>Estimated arrival: 1 PM - 5 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0485",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #5240</h3><p>Dear Morgan, please find attached your invoice for Enterprise License.</p><p>Total due: $474.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0486",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Acme Corp.</p><p>Here is your receipt for $442.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0487",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Enterprise License will renew on 2026-11-15.</p><p>Amount: $325.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0488",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Lee is confirmed for 2026-11-06 at 10:00 AM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0489",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-28 at 10:00 AM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0490",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Smith is confirmed for 2026-11-12 at 10:00 AM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0491",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Alex,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0492",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Casey, your order #88379 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0493",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Alex, your order #70239 has shipped today.</p><p>Track it at store.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0494",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Chris, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0495",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your November statement is now available.</p><p>Log in to view your balance of $3376.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0496",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #9438</h3><p>Dear Taylor, please find attached your invoice for Cloud Storage.</p><p>Total due: $66.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0497",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Premium Plan will renew on 2026-11-24.</p><p>Amount: $447.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0498",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Premium Plan account from Zoom.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0499",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Taylor,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0500",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Security Alert</h2><p>A new device signed in to your Premium Plan account from Building B.</p><p>If this wasn't you, secure your account immediately.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Security Alert"
+    ]
+  },
+  {
+    "id": "normal-gen-0501",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Wayne Ent.</p><p>Here is your receipt for $446.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0502",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Enterprise License will renew on 2026-11-27.</p><p>Amount: $414.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0503",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA983 to Berlin is confirmed for 2026-11-21.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0504",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Casey, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0505",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Globex! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0506",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 24% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0507",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #6582</h3><p>Dear Taylor, please find attached your invoice for Premium Plan.</p><p>Total due: $277.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0508",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 15% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0509",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Chris, your package is out for delivery today.</p><p>Estimated arrival: 9 AM - 12 PM.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "normal-gen-0510",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your November statement is now available.</p><p>Log in to view your balance of $3576.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0511",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 3:30 PM in Room 4.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0512",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your November statement is now available.</p><p>Log in to view your balance of $486.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "statement",
+      "balance"
+    ]
+  },
+  {
+    "id": "normal-gen-0513",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Jordan, your order #98201 has shipped today.</p><p>Track it at market.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0514",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA535 to Tokyo is confirmed for 2026-11-20.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0515",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-27 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0516",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 63% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0517",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to API Access will renew on 2026-11-01.</p><p>Amount: $155.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0518",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA523 to Sydney is confirmed for 2026-11-07.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0519",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Cloud Storage will renew on 2026-11-20.</p><p>Amount: $324.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0520",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 28% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0521",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA578 to London is confirmed for 2026-11-07.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0522",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 36: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0523",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Stark Ind! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0524",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #1537</h3><p>Dear Sam, please find attached your invoice for Premium Plan.</p><p>Total due: $38.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0525",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Morgan,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0526",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your flight AA850 to Berlin is confirmed for 2026-11-09.</p><p>Check-in opens 24 hours before departure.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "confirmed"
+    ]
+  },
+  {
+    "id": "normal-gen-0527",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #6035</h3><p>Dear Sam, please find attached your invoice for Cloud Storage.</p><p>Total due: $77.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0528",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #3884</h3><p>Dear Taylor, please find attached your invoice for Cloud Storage.</p><p>Total due: $185.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0529",
+    "category": "generated_normal",
+    "html": "<html><body><p>Reminder: Project sync tomorrow at 3:30 PM in Room 4.</p><p>Agenda attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Project sync",
+      "Agenda"
+    ]
+  },
+  {
+    "id": "normal-gen-0530",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q1 all-hands meeting is scheduled for 2026-11-06.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0531",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Umbrella Corp! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0532",
+    "category": "generated_normal",
+    "html": "<html><body><p>Welcome to Acme Corp! We are thrilled to have you on board.</p><p>Your onboarding guide is attached.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "attached"
+    ]
+  },
+  {
+    "id": "normal-gen-0533",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Globex.</p><p>Here is your receipt for $343.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0534",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Lee is confirmed for 2026-11-12 at 2:00 PM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0535",
+    "category": "generated_normal",
+    "html": "<html><body><p>Thank you for your recent purchase at Globex.</p><p>Here is your receipt for $48.00.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "receipt"
+    ]
+  },
+  {
+    "id": "normal-gen-0536",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q4 all-hands meeting is scheduled for 2026-11-02.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  },
+  {
+    "id": "normal-gen-0537",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your appointment with Dr. Jones is confirmed for 2026-11-02 at 10:00 AM.</p><p>Please arrive 15 minutes early.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "appointment"
+    ]
+  },
+  {
+    "id": "normal-gen-0538",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #9136</h3><p>Dear Sam, please find attached your invoice for Cloud Storage.</p><p>Total due: $417.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0539",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to API Access will renew on 2026-11-21.</p><p>Amount: $274.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0540",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 22: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0541",
+    "category": "generated_normal",
+    "html": "<html><body><h2>Order Confirmation</h2><p>Hi Alex, your order #98462 has shipped today.</p><p>Track it at shop.example/track</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "shipped",
+      "Order Confirmation"
+    ]
+  },
+  {
+    "id": "normal-gen-0542",
+    "category": "generated_normal",
+    "html": "<html><body><p>Your subscription to Premium Plan will renew on 2026-11-26.</p><p>Amount: $56.00. Manage your subscription in settings.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "renew"
+    ]
+  },
+  {
+    "id": "normal-gen-0543",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Taylor,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0544",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi Morgan,</p><p>We received your request to reset your password. If you didn't request this, please ignore this email.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "reset your password"
+    ]
+  },
+  {
+    "id": "normal-gen-0545",
+    "category": "generated_normal",
+    "html": "<html><body><h3>Invoice #6406</h3><p>Dear Morgan, please find attached your invoice for Cloud Storage.</p><p>Total due: $47.00</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Invoice",
+      "Total due"
+    ]
+  },
+  {
+    "id": "normal-gen-0546",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 19% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0547",
+    "category": "generated_normal",
+    "html": "<html><body><div style='background-color:#111;'><p style='color:#fff;'>Flash sale: 10% off until midnight.</p></div></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Flash sale"
+    ]
+  },
+  {
+    "id": "normal-gen-0548",
+    "category": "generated_normal",
+    "html": "<html><body><div style='display:none;'>View in browser</div><h1>The Weekly Build</h1><p>Issue 69: databases, caches, and one good bug story.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "Weekly Build"
+    ]
+  },
+  {
+    "id": "normal-gen-0549",
+    "category": "generated_normal",
+    "html": "<html><body><p>Hi team, the Q3 all-hands meeting is scheduled for 2026-11-20.</p><p>Please RSVP by Friday.</p></body></html>",
+    "expected_verdict": "CLEAN",
+    "should_preserve": [
+      "meeting"
+    ]
+  }
+]

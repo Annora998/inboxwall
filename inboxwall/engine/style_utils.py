@@ -68,7 +68,7 @@ def hidden_reason(style_dict: dict) -> str:
         
     if style_dict.get("mso-hide") == "all": return "mso_hide"
     if style_dict.get("height") == "0" and "hidden" in style_dict.get("overflow", ""): return "clipped_box"
-    if "clip:rect(0,0,0,0)" in style_dict.get("clip", ""): return "clipped_box"
+    if "rect(0,0,0,0)" in style_dict.get("clip", ""): return "clipped_box"
 
     for prop in ["left", "top", "right", "bottom", "margin-left"]:
         val = style_dict.get(prop, "")
