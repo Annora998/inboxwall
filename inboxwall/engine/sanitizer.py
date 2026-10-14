@@ -1,10 +1,36 @@
-"""InBox Wall v2 - Engine Sanitizer."""
+"""InBox Wall v2 - Engine Sanitizer (allow-list extraction)."""
 import logging
 import css_inline
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup, Comment, NavigableString
 from inboxwall.engine.style_utils import parse_style, hidden_reason, classify_hidden, get_effective_style
 from inboxwall.engine.cheap_cut.invisible_chars import InvisibleCharScanner
 from inboxwall.engine.models import Finding
+
+# ALLOW-LIST: text is copied ONLY from tags that render visibly.
+# Anything not listed here (unknown, future, or exotic tags) is dropped.
+VISIBLE_TEXT_TAGS = {
+    "[document]", "html", "body", "div", "p", "span", "a", "pre", "code",
+    "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li", "dl", "dt", "dd",
+    "table", "thead", "tbody", "tfoot", "tr", "td", "th", "caption",
+    "blockquote", "q", "cite", "em", "strong", "b", "i", "u", "s", "small",
+    "big", "sub", "sup", "mark", "abbr", "time", "label", "button",
+    "article", "section", "header", "footer", "main", "nav", "aside",
+    "figure", "figcaption", "address", "center", "font", "ins", "del",
+    "kbd", "samp", "var", "bdi", "bdo", "ruby", "rt", "rp", "hgroup",
+}
+
+def _extract_visible_text(soup) -> str:
+    parts = []
+    for text_node in soup.find_all(string=True):
+        if type(text_node) is not NavigableString:
+            continue  # skips Comment, Doctype, CData, etc.
+        parent = text_node.parent
+        name = getattr(parent, "name", "[document]")
+        if name in VISIBLE_TEXT_TAGS:
+            chunk = str(text_node).strip()
+            if chunk:
+                parts.append(chunk)
+    return "\n".join(parts)
 
 class Sanitizer:
     def __init__(self):
@@ -13,7 +39,6 @@ class Sanitizer:
     def clean(self, html: str) -> tuple[str, list]:
         findings = []
 
-        # Inline all CSS so class-based hiding becomes detectable.
         try:
             html = css_inline.inline(
                 html,
@@ -56,7 +81,6 @@ class Sanitizer:
                         tag.append("[BLOCKED_POTENTIAL_INJECTION]")
                 continue
 
-            # Effective style accounts for inheritance (subtree hiders + cascade)
             style_dict = get_effective_style(tag)
             reason = hidden_reason(style_dict)
 
@@ -70,7 +94,6 @@ class Sanitizer:
                         position=f"inline_style ({reason})"
                     ))
 
-                    # Subtree hiders clear everything; soft hides only clear leaf nodes
                     hard_hides = {
                         "display_none", "visibility_hidden", "mso_hide",
                         "clipped_box", "offscreen", "opacity_zero"
@@ -81,6 +104,7 @@ class Sanitizer:
                         if classification == "hidden_instruction":
                             tag.append("[BLOCKED_POTENTIAL_INJECTION]")
 
-        clean_text = soup.get_text(separator="\n", strip=True)
+        # ALLOW-LIST extraction: only visibly-rendering tags contribute text
+        clean_text = _extract_visible_text(soup)
         clean_text = self.invisible_scanner.strip_safe(clean_text)
         return clean_text, findings

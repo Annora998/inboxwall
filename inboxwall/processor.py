@@ -36,10 +36,13 @@ class EmailProcessor:
                     safe_text = html.escape(email["text_body"] or "")
                     html_to_process = f"<pre>{safe_text}</pre>"
 
-                result = self.pipeline.process(html_to_process)
-
-                safe_sender = self.pipeline.sanitize_metadata(email["sender"])
-                safe_subject = self.pipeline.sanitize_metadata(email["subject"])
+                result = self.pipeline.process(
+                html_to_process,
+                subject=email["subject"],
+                sender=email["sender"]
+                )
+                safe_sender = result["safe_sender"]
+                safe_subject = result["safe_subject"]
 
                 # Real IMAP identity for the composite key
                 account = email.get("account", "unknown")
