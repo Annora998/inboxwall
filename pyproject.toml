@@ -32,6 +32,7 @@ dev = [
 [project.scripts]
 inboxwall-serve = "inboxwall.cli:serve"
 inboxwall-mcp = "inboxwall.cli:run_mcp"
+inboxwall-sync = "inboxwall.cli:sync"
 inboxwall-doctor = "inboxwall.cli:doctor"
 inboxwall-benchmark = "inboxwall.cli:benchmark"
 
