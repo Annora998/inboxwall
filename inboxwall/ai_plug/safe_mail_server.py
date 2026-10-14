@@ -12,9 +12,9 @@ app = FastAPI(title="InBox Wall Safe Mail API", version="2.0.0")
 API_TOKEN = secrets.token_urlsafe(32)
 print(f"\n[SECURITY] API Token generated: {API_TOKEN}\n")
 
-DATA_DIR = Path.home() / ".inboxwall" / "data"
+
 FRONTEND_DIR = Path(__file__).resolve().parent.parent.parent / "frontend"
-db = DatabaseManager(base_dir=DATA_DIR)
+db = DatabaseManager()
 
 # FIX: Security headers middleware
 @app.middleware("http")
@@ -61,30 +61,17 @@ def list_emails(limit: int = 50, _: bool = Depends(verify_token), request: Reque
         return [dict(row) for row in cursor.fetchall()]
 
 @app.get("/api/emails/{safe_email_id}")
-def get_email(safe_email_id: int, _: bool = Depends(verify_token), request: Request = None):
+def get_email(safe_email_id: int, include_threats: bool = False, _: bool = Depends(verify_token), request: Request = None):
     verify_host(request)
     email = db.get_safe_email(safe_email_id)
-    if not email:
-        raise HTTPException(status_code=404, detail="Email not found")
-    
-    # FIX: Never show locked mail to AI
-    if email["verdict"] == "LOCKED_AWAY":
-        raise HTTPException(status_code=403, detail="This email is locked due to high threat score")
+    if not email: raise HTTPException(status_code=404, detail="Email not found")
+    if email["verdict"] == "LOCKED_AWAY": raise HTTPException(status_code=403, detail="This email is locked due to high threat score")
     
     threats = []
-    with db._get_connection(db.vault_db_path, read_only=True) as conn:
-        cursor = conn.execute(
-            "SELECT finding_kind, full_text, position FROM threat_vault WHERE safe_email_id = ?", 
-            (safe_email_id,)
-        )
-        threats = [dict(row) for row in cursor.fetchall()]
+    # FIX: Only return vault data if explicitly requested (by the human dashboard)
+    if include_threats:
+        with db._get_connection(db.vault_db_path, read_only=True) as conn:
+            cursor = conn.execute("SELECT finding_kind, full_text, position FROM threat_vault WHERE safe_email_id = ?", (safe_email_id,))
+            threats = [dict(row) for row in cursor.fetchall()]
 
-    return {
-        "id": email["id"],
-        "message_id": email["message_id"],
-        "sender": email["sender"],
-        "subject": email["subject"],
-        "clean_body": email["clean_body"],
-        "verdict": email["verdict"],
-        "threats": threats
-    }
+    return {"id": email["id"], "message_id": email["message_id"], "sender": email["sender"], "subject": email["subject"], "clean_body": email["clean_body"], "verdict": email["verdict"], "threats": threats}

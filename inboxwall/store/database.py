@@ -5,13 +5,17 @@ from pathlib import Path
 from typing import Optional
 import platform
 
+
+def default_data_dir() -> Path:
+    """Single source of truth for the per-user data folder."""
+    if platform.system() == "Windows":
+        return Path.home() / "AppData" / "Local" / "InBoxWall"
+    return Path.home() / ".inboxwall" / "data"
+
 class DatabaseManager:
     def __init__(self, base_dir: Optional[Path] = None, read_only: bool = False):
-        if base_dir is None:
-            if platform.system() == "Windows":
-                base_dir = Path.home() / "AppData" / "Local" / "InBoxWall"
-            else:
-                base_dir = Path.home() / ".inboxwall" / "data"
+            if base_dir is None:
+              base_dir = default_data_dir()
         
         base_dir.mkdir(parents=True, exist_ok=True)
         

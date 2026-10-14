@@ -73,3 +73,28 @@ Ensure you have Python 3.10 or higher installed on your system.
    ```bash
    git clone https://github.com/Annora998/inboxwall.git
    cd inboxwall
+
+## Limitations and Scope
+
+InBox Wall mitigates prompt-injection and hidden-text attacks in email bodies. It has defined, tested boundaries.
+
+### What it defends against
+- Hidden text via inline or class-based CSS (display, visibility, opacity, clipping, off-screen positioning, tiny fonts), evaluated with inheritance so parent hides apply to children
+- White-on-white text when the background is explicitly light; unknown or dark backgrounds are treated as visible
+- Invisible Unicode (zero-width spaces, bidi controls, tag characters, word joiners), while preserving legitimate joiners in Malayalam, Arabic, Hindi and emoji
+- Cyrillic homograph spoofing in attack phrases
+- Known prompt-injection phrases in visible or hidden text
+- Text leaked through non-rendering tags (title, textarea, select, option, details, summary, template)
+
+### Known limits (not yet defended)
+- Attachments: PDFs, Office documents and executables are not scanned
+- URLs: no phishing-domain or link-reputation analysis
+- Images: text embedded in images is not read (no OCR)
+- Subject and sender: currently stripped of invisible characters only; scanning them with the full engine is planned
+- Text extraction uses a deny-list of non-rendering tags; a strict allow-list of visibly-rendering tags is planned
+- No audit log yet of which AI tool read which email and when
+- Credentials are supplied via configuration; OS keychain integration is planned
+- If CSS inlining fails, the email is locked (fail-closed) rather than parsed by a fallback resolver
+
+### Honest positioning
+No security tool guarantees complete protection. InBox Wall is a defense-in-depth layer for AI email pipelines, with published benchmark numbers and explicit known limits. Use it alongside, not instead of, your provider's spam and phishing filters and human oversight.

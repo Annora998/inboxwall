@@ -12,15 +12,18 @@ from inboxwall.store.database import DatabaseManager
 mcp = FastMCP("InBox Wall Safe Mail")
 
 # Point to the main data folder
-DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data"
-db = DatabaseManager(base_dir=DATA_DIR, read_only=True)
+
+db = DatabaseManager(read_only=True)
 
 @mcp.tool()
 def list_protected_emails(limit: int = 10) -> str:
     with db._get_connection(db.safe_db_path, read_only=True) as conn:
-        cursor = conn.execute("SELECT id, message_id, sender, subject, verdict FROM safe_emails ORDER BY received_at DESC LIMIT ?", (limit,))
-        emails = [dict(row) for row in cursor.fetchall()]
-    return json.dumps(emails, indent=2)
+        # FIX: Filter out LOCKED_AWAY emails. AI should never see them, not even their subjects.
+        cursor = conn.execute(
+            "SELECT id, message_id, sender, subject, verdict FROM safe_emails WHERE verdict != 'LOCKED_AWAY' ORDER BY received_at DESC LIMIT ?", 
+            (limit,)
+        )
+        return json.dumps([dict(row) for row in cursor.fetchall()], indent=2)
 
 @mcp.tool()
 def read_safe_email(safe_email_id: int) -> str:
