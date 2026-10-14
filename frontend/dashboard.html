@@ -107,7 +107,8 @@
             document.getElementById('empty-state').style.display = 'none';
             document.getElementById('detail-content').style.display = 'block';
             
-            const email = await fetchAPI(`/api/emails/${id}`);
+            // FIX: Request threats for the human dashboard
+	    const email = await fetchAPI(`/api/emails/${id}?include_threats=true`);
 
             // SECURITY: textContent prevents XSS injection
             document.getElementById('d-subject').textContent = email.subject;

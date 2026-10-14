@@ -12,6 +12,44 @@ def parse_style(style_str: str) -> dict:
             out[k.strip().lower()] = v.replace("!important", "").strip().lower()
     return out
 
+def get_effective_style(tag):
+    """Computes the effective CSS for a tag, handling inheritance and subtree hiders."""
+    effective = {}
+    current = tag
+    ancestors_styles = []
+    
+    # Collect styles from current tag up to root
+    while current and hasattr(current, 'name') and current.name:
+        ancestors_styles.append(parse_style(current.get("style", "")))
+        current = current.parent
+        
+    # 1. Subtree hiders: If ANY ancestor (including self) has these, they apply to the whole subtree
+    for style_dict in ancestors_styles:
+        if style_dict.get("display") == "none": effective["display"] = "none"
+        if style_dict.get("visibility") in ("hidden", "collapse"): effective["visibility"] = style_dict.get("visibility")
+        if style_dict.get("mso-hide") == "all": effective["mso-hide"] = "all"
+        try:
+            op = float(style_dict.get("opacity", "1"))
+            if op <= 0.05: effective["opacity"] = "0"
+        except ValueError: pass
+
+    # 2. Cascading props: nearest declared wins (standard CSS cascade)
+    for prop in ['color', 'background-color', 'font-size']:
+        for style_dict in ancestors_styles:
+            if prop in style_dict:
+                effective[prop] = style_dict[prop]
+                break
+                
+    # 3. Positioning/Clipping: nearest declared wins
+    for prop in ['position', 'clip', 'overflow', 'height', 'left', 'top', 'right', 'bottom', 'margin-left']:
+        for style_dict in ancestors_styles:
+            if prop in style_dict:
+                effective[prop] = style_dict[prop]
+                break
+                
+    return effective
+
+
 def hidden_reason(style_dict: dict) -> str:
     if style_dict.get("display") == "none": return "display_none"
     if style_dict.get("visibility") in ("hidden", "collapse"): return "visibility_hidden"

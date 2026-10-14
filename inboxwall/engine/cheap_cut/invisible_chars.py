@@ -2,7 +2,16 @@
 import re
 
 class InvisibleCharScanner:
-    INVISIBLE_RANGES = [(0x200B, 0x200F), (0x202A, 0x202E), (0x2060, 0x206F), (0xFEFF, 0xFEFF), (0xE0000, 0xE007F)]
+    # FIX: Removed 0x200C (ZWNJ) and 0x200D (ZWJ) from flagging ranges.
+    # They are legitimate in Malayalam/Arabic/Hindi.
+    INVISIBLE_RANGES = [
+        (0x200B, 0x200B), # ZWSP
+        (0x200E, 0x200F), # LRM, RLM
+        (0x202A, 0x202E), # Bidi controls
+        (0x2060, 0x206F), # Word joiner, invisible operators
+        (0xFEFF, 0xFEFF), # BOM
+        (0xE0000, 0xE007F) # Tag characters
+    ]
     
     def scan(self, text: str) -> list:
         findings = []
