@@ -90,9 +90,7 @@ InBox Wall mitigates prompt-injection and hidden-text attacks in email bodies. I
 - Attachments: PDFs, Office documents and executables are not scanned
 - URLs: no phishing-domain or link-reputation analysis
 - Images: text embedded in images is not read (no OCR)
-- Subject and sender: currently stripped of invisible characters only; scanning them with the full engine is planned
-- Text extraction uses a deny-list of non-rendering tags; a strict allow-list of visibly-rendering tags is planned
-- No audit log yet of which AI tool read which email and when
+- Subject and sender: scanned with the same engine as email bodies (invisible chars + phrase detection)- Text extraction uses a strict allow-list of visibly-rendering tags (unknown tags are dropped)
 - Credentials are supplied via configuration; OS keychain integration is planned
 - If CSS inlining fails, the email is locked (fail-closed) rather than parsed by a fallback resolver
 
