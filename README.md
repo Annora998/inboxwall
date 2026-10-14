@@ -98,3 +98,6 @@ InBox Wall mitigates prompt-injection and hidden-text attacks in email bodies. I
 
 ### Honest positioning
 No security tool guarantees complete protection. InBox Wall is a defense-in-depth layer for AI email pipelines, with published benchmark numbers and explicit known limits. Use it alongside, not instead of, your provider's spam and phishing filters and human oversight.
+
+
+**🌐 [Live Demo](https://annora998.github.io/inboxwall/)** - Experience the full audit dashboard with sample data, no installation required.
