@@ -57,9 +57,14 @@ class DatabaseManager:
                     clean_body TEXT,
                     verdict TEXT,
                     rules_version TEXT DEFAULT 'v2.0.0',
+                    threat_score INTEGER DEFAULT 0,
                     UNIQUE(account, folder, uid_validity, uid)
                 )
             """)
+            # Lightweight migration for databases created by older versions
+            cols = {r["name"] for r in conn.execute("PRAGMA table_info(safe_emails)")}
+            if "threat_score" not in cols:
+                conn.execute("ALTER TABLE safe_emails ADD COLUMN threat_score INTEGER DEFAULT 0")
             conn.commit()
 
         with self._get_connection(self.vault_db_path) as conn:
@@ -74,18 +79,26 @@ class DatabaseManager:
                     FOREIGN KEY (safe_email_id) REFERENCES safe_emails(id)
                 )
             """)
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS email_originals (
+                    safe_email_id INTEGER PRIMARY KEY,
+                    original_html TEXT,
+                    FOREIGN KEY (safe_email_id) REFERENCES safe_emails(id)
+                )
+            """)
             conn.commit()
 
     def save_email(self, account: str, folder: str, uid_validity: int, uid: int,
                    message_id: str, received_at: str, sender: str, subject: str,
                    clean_body: str, verdict: str, findings: list,
-                   rules_version: str = "v2.0.0"):
+                   rules_version: str = "v2.0.0", original_html: str = "",
+                   threat_score: int = 0):
         with self._get_connection(self.safe_db_path) as conn:
             conn.execute("""
                 INSERT INTO safe_emails
                 (account, folder, uid_validity, uid, message_id, received_at,
-                 sender, subject, clean_body, verdict, rules_version)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                 sender, subject, clean_body, verdict, rules_version, threat_score)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 ON CONFLICT(account, folder, uid_validity, uid) DO UPDATE SET
                     message_id=excluded.message_id,
                     received_at=excluded.received_at,
@@ -93,9 +106,10 @@ class DatabaseManager:
                     subject=excluded.subject,
                     clean_body=excluded.clean_body,
                     verdict=excluded.verdict,
-                    rules_version=excluded.rules_version
+                    rules_version=excluded.rules_version,
+                    threat_score=excluded.threat_score
             """, (account, folder, uid_validity, uid, message_id, received_at,
-                  sender, subject, clean_body, verdict, rules_version))
+                  sender, subject, clean_body, verdict, rules_version, threat_score))
 
             cursor = conn.execute(
                 "SELECT id FROM safe_emails WHERE account=? AND folder=? AND uid_validity=? AND uid=?",
@@ -104,18 +118,31 @@ class DatabaseManager:
             safe_email_id = cursor.fetchone()["id"]
             conn.commit()
 
-        if findings:
-            with self._get_connection(self.vault_db_path) as conn:
-                conn.execute("DELETE FROM threat_vault WHERE safe_email_id = ?", (safe_email_id,))
+        with self._get_connection(self.vault_db_path) as conn:
+            conn.execute(
+                "INSERT OR REPLACE INTO email_originals (safe_email_id, original_html) VALUES (?, ?)",
+                (safe_email_id, original_html)
+            )
+            conn.execute("DELETE FROM threat_vault WHERE safe_email_id = ?", (safe_email_id,))
+            if findings:
                 vault_data = [(safe_email_id, f.kind, f.full_text, f.position) for f in findings]
                 conn.executemany(
                     "INSERT INTO threat_vault (safe_email_id, finding_kind, full_text, position) VALUES (?, ?, ?, ?)",
                     vault_data
                 )
-                conn.commit()
+            conn.commit()
 
     def get_safe_email(self, safe_email_id: int) -> Optional[dict]:
         with self._get_connection(self.safe_db_path, read_only=True) as conn:
             cursor = conn.execute("SELECT * FROM safe_emails WHERE id = ?", (safe_email_id,))
+            row = cursor.fetchone()
+            return dict(row) if row else None
+
+    def get_original(self, safe_email_id: int) -> Optional[dict]:
+        with self._get_connection(self.vault_db_path, read_only=True) as conn:
+            cursor = conn.execute(
+                "SELECT original_html FROM email_originals WHERE safe_email_id = ?",
+                (safe_email_id,)
+            )
             row = cursor.fetchone()
             return dict(row) if row else None

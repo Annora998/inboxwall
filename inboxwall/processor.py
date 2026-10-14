@@ -61,7 +61,8 @@ class EmailProcessor:
                     message_id=msg_id, received_at=email["received_at"],
                     sender=safe_sender, subject=safe_subject,
                     clean_body=result["clean_text"], verdict=result["verdict"].value,
-                    findings=threat_findings, rules_version=RULES_VERSION
+                    findings=threat_findings, rules_version=RULES_VERSION,
+                    original_html=html_to_process, threat_score=result["score"]
                 )
 
                 if result["verdict"] == Verdict.CLEAN:
