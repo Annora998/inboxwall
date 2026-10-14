@@ -1,6 +1,7 @@
 """InBox Wall v2 - Master Processor."""
 import logging
 import html
+import hashlib
 from typing import Dict
 from inboxwall.mail.mail_source import MailSource
 from inboxwall.engine.pipeline import WallPipeline
@@ -8,7 +9,7 @@ from inboxwall.store.database import DatabaseManager
 from inboxwall.engine.models import Verdict
 
 logger = logging.getLogger(__name__)
-RULES_VERSION = "v2.2.0"
+RULES_VERSION = "v2.3.1"
 
 class EmailProcessor:
     def __init__(self, mail_source: MailSource, db: DatabaseManager):
@@ -37,23 +38,23 @@ class EmailProcessor:
                     html_to_process = f"<pre>{safe_text}</pre>"
 
                 result = self.pipeline.process(
-                html_to_process,
-                subject=email["subject"],
-                sender=email["sender"]
+                    html_to_process,
+                    subject=email["subject"],
+                    sender=email["sender"]
                 )
                 safe_sender = result["safe_sender"]
                 safe_subject = result["safe_subject"]
 
-                # Real IMAP identity for the composite key
                 account = email.get("account", "unknown")
                 folder = email.get("folder", "INBOX")
                 uid_validity = int(email.get("uid_validity", 0) or 0)
                 uid = email.get("uid")
+                
+                # FIX: Use hashlib for deterministic, consistent fallback UID
                 if uid is None:
-                    uid = abs(hash(msg_id)) % 1_000_000_000
+                    uid = int(hashlib.md5(msg_id.encode()).hexdigest()[:8], 16)
                 uid = int(uid)
 
-                # Only real threats (weight > 0) go to the vault
                 threat_findings = [f for f in result["findings"] if f.weight > 0]
 
                 self.db.save_email(
@@ -74,5 +75,12 @@ class EmailProcessor:
             except Exception as e:
                 logger.error("Error processing message %s: %s", msg_id, e)
                 stats["errors"] += 1
+
+        if emails:
+            try:
+                self.db.record_sync(emails[0].get("account", "unknown"), emails[0].get("folder", "INBOX"))
+            except Exception:
+                pass
+
         logger.info("Processing complete. Stats: %s", stats)
         return stats

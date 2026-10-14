@@ -34,7 +34,7 @@ wheels/
 *.swo
 *~
 # Temporary test files and folders
-test_*.py
+test_temp_*/
 test_*/
 *.db-shm
 *.db-wal

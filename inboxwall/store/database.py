@@ -5,9 +5,11 @@ from pathlib import Path
 from typing import Optional
 import platform
 
+MAX_ORIGINAL_BYTES = 200_000
+ORIGINAL_RETENTION_DAYS = 30
+
 
 def default_data_dir() -> Path:
-    """Single source of truth for the per-user data folder."""
     if platform.system() == "Windows":
         return Path.home() / "AppData" / "Local" / "InBoxWall"
     return Path.home() / ".inboxwall" / "data"
@@ -19,9 +21,14 @@ class DatabaseManager:
             base_dir = default_data_dir()
 
         base_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            base_dir.chmod(0o700)
+        except Exception:
+            pass
 
         self.safe_db_path = base_dir / "safemail.db"
         self.vault_db_path = base_dir / "vault.db"
+        self.reports_dir = base_dir / "reports"
 
         if not read_only:
             self._init_databases()
@@ -58,13 +65,21 @@ class DatabaseManager:
                     verdict TEXT,
                     rules_version TEXT DEFAULT 'v2.0.0',
                     threat_score INTEGER DEFAULT 0,
+                    review_status TEXT DEFAULT 'locked',
                     UNIQUE(account, folder, uid_validity, uid)
                 )
             """)
-            # Lightweight migration for databases created by older versions
             cols = {r["name"] for r in conn.execute("PRAGMA table_info(safe_emails)")}
             if "threat_score" not in cols:
                 conn.execute("ALTER TABLE safe_emails ADD COLUMN threat_score INTEGER DEFAULT 0")
+            if "review_status" not in cols:
+                conn.execute("ALTER TABLE safe_emails ADD COLUMN review_status TEXT DEFAULT 'locked'")
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS sync_meta (
+                    key TEXT PRIMARY KEY,
+                    value TEXT
+                )
+            """)
             conn.commit()
 
         with self._get_connection(self.vault_db_path) as conn:
@@ -83,16 +98,36 @@ class DatabaseManager:
                 CREATE TABLE IF NOT EXISTS email_originals (
                     safe_email_id INTEGER PRIMARY KEY,
                     original_html TEXT,
+                    stored_at TEXT DEFAULT CURRENT_TIMESTAMP,
                     FOREIGN KEY (safe_email_id) REFERENCES safe_emails(id)
                 )
             """)
+            cols = {r["name"] for r in conn.execute("PRAGMA table_info(email_originals)")}
+            if "stored_at" not in cols:
+                # SQLite forbids non-constant defaults in ALTER; backfill instead
+                conn.execute("ALTER TABLE email_originals ADD COLUMN stored_at TEXT")
+                conn.execute("UPDATE email_originals SET stored_at = datetime('now') WHERE stored_at IS NULL")
+            # Privacy: retention purge of quarantined originals
+            conn.execute(
+                "DELETE FROM email_originals WHERE stored_at IS NOT NULL AND stored_at < datetime('now', ?)",
+                (f"-{ORIGINAL_RETENTION_DAYS} day",)
+            )
             conn.commit()
+
+        for p in (self.safe_db_path, self.vault_db_path):
+            try:
+                p.chmod(0o600)
+            except Exception:
+                pass
 
     def save_email(self, account: str, folder: str, uid_validity: int, uid: int,
                    message_id: str, received_at: str, sender: str, subject: str,
                    clean_body: str, verdict: str, findings: list,
                    rules_version: str = "v2.0.0", original_html: str = "",
                    threat_score: int = 0):
+        if original_html and len(original_html.encode("utf-8", "ignore")) > MAX_ORIGINAL_BYTES:
+            original_html = original_html[:MAX_ORIGINAL_BYTES] + "\n[truncated for privacy]"
+
         with self._get_connection(self.safe_db_path) as conn:
             conn.execute("""
                 INSERT INTO safe_emails
@@ -120,7 +155,7 @@ class DatabaseManager:
 
         with self._get_connection(self.vault_db_path) as conn:
             conn.execute(
-                "INSERT OR REPLACE INTO email_originals (safe_email_id, original_html) VALUES (?, ?)",
+                "INSERT OR REPLACE INTO email_originals (safe_email_id, original_html, stored_at) VALUES (?, ?, datetime('now'))",
                 (safe_email_id, original_html)
             )
             conn.execute("DELETE FROM threat_vault WHERE safe_email_id = ?", (safe_email_id,))
@@ -146,3 +181,37 @@ class DatabaseManager:
             )
             row = cursor.fetchone()
             return dict(row) if row else None
+
+    def delete_original(self, safe_email_id: int):
+        with self._get_connection(self.vault_db_path) as conn:
+            conn.execute("DELETE FROM email_originals WHERE safe_email_id = ?", (safe_email_id,))
+            conn.commit()
+
+    def set_review_status(self, safe_email_id: int, status: str, verdict: Optional[str] = None):
+        with self._get_connection(self.safe_db_path) as conn:
+            if verdict:
+                conn.execute(
+                    "UPDATE safe_emails SET review_status = ?, verdict = ? WHERE id = ?",
+                    (status, verdict, safe_email_id)
+                )
+            else:
+                conn.execute(
+                    "UPDATE safe_emails SET review_status = ? WHERE id = ?",
+                    (status, safe_email_id)
+                )
+            conn.commit()
+
+    def record_sync(self, account: str, folder: str):
+        from datetime import datetime, timezone
+        now = datetime.now(timezone.utc).isoformat()
+        with self._get_connection(self.safe_db_path) as conn:
+            conn.execute("INSERT OR REPLACE INTO sync_meta (key, value) VALUES ('last_sync', ?)", (now,))
+            conn.execute("INSERT OR REPLACE INTO sync_meta (key, value) VALUES ('mailbox', ?)", (f"{folder} ({account})",))
+            conn.commit()
+
+    def get_sync(self) -> dict:
+        out = {}
+        with self._get_connection(self.safe_db_path, read_only=True) as conn:
+            for row in conn.execute("SELECT key, value FROM sync_meta"):
+                out[row["key"]] = row["value"]
+        return out

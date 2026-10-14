@@ -1,39 +1,34 @@
-"""InBox Wall v2 - Invisible Character Scanner (Joiner Fix)."""
+"""InBox Wall v2 - Invisible Character Scanner."""
 import re
 
 class InvisibleCharScanner:
-    # FIX: Removed 0x200C (ZWNJ) and 0x200D (ZWJ) from flagging ranges.
-    # They are legitimate in Malayalam/Arabic/Hindi.
-    INVISIBLE_RANGES = [
-        (0x200B, 0x200B), # ZWSP
-        (0x200E, 0x200F), # LRM, RLM
-        (0x202A, 0x202E), # Bidi controls
-        (0x2060, 0x206F), # Word joiner, invisible operators
-        (0xFEFF, 0xFEFF), # BOM
-        (0xE0000, 0xE007F) # Tag characters
-    ]
-    
+    INVISIBLE_RANGES = [(0x200B, 0x200B), (0x200E, 0x200F), (0x202A, 0x202E), (0x2060, 0x206F), (0xFEFF, 0xFEFF), (0xE0000, 0xE007F)]
+
     def scan(self, text: str) -> list:
         findings = []
         for start, end in self.INVISIBLE_RANGES:
-            pattern = f"[{chr(start)}-{chr(end)}]"
-            matches = re.findall(pattern, text)
-            if matches:
-                findings.append({"type": "invisible_char", "count": len(matches), "range": f"U+{start:04X}-U+{end:04X}"})
+            rng = f"U+{start:04X}-U+{end:04X}"
+            matches = list(re.finditer(f"[{chr(start)}-{chr(end)}]", text))
+            if not matches:
+                continue
+            count = len(matches)
+            first = matches[0]
+            ctx = text[max(0, first.start() - 20):min(len(text), first.end() + 20)]
+            ctx = re.sub(r"\s+", " ", ctx).strip()
+            noun = "character" if count == 1 else "characters"
+            findings.append({
+                "type": "invisible_char",
+                "count": count,
+                "range": rng,
+                "summary": f"{count} invisible {noun} ({rng}) inside: \"{ctx}\"",
+            })
         return findings
-        
+
     def strip_safe(self, text: str) -> str:
-        # 1. Strip Tag characters entirely
-        text = re.sub(r"[\U000E0000-\U000E007F]", "", text)
-        # 2. Strip Bidi overrides
+        # FIX: Added variation selectors, soft hyphen, braille blank, hangul fillers, and LRM/RLM to strip list
+        text = re.sub(r"[\U000E0000-\U000E007F\uFE00-\uFE0F\u00AD\u2800\u3164\uFFA0\u200E\u200F]", "", text)
         text = re.sub(r"[\u202A-\u202E\u2066-\u2069]", "", text)
-        # 3. Strip zero-width spaces, BOM, word joiners
         text = text.replace("\u200b", "").replace("\ufeff", "").replace("\u2060", "")
-        
-        # 4. FIX: Only strip ZWNJ/ZWJ if they are inside Latin words or in long runs (>3)
-        # Strip ZWJ/ZWNJ surrounded by ASCII letters (e.g., "a\u200db" -> "ab")
         text = re.sub(r"([a-zA-Z])[\u200c\u200d]+([a-zA-Z])", r"\1\2", text)
-        # Strip long runs of ZWJ/ZWNJ (e.g., "\u200d\u200d\u200d\u200d")
         text = re.sub(r"[\u200c\u200d]{4,}", "", text)
-        
         return text

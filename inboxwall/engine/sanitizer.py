@@ -1,13 +1,10 @@
-"""InBox Wall v2 - Engine Sanitizer (allow-list extraction)."""
-import logging
+"""InBox Wall v2 - Engine Sanitizer."""
 import css_inline
 from bs4 import BeautifulSoup, Comment, NavigableString
 from inboxwall.engine.style_utils import parse_style, hidden_reason, classify_hidden, get_effective_style
 from inboxwall.engine.cheap_cut.invisible_chars import InvisibleCharScanner
 from inboxwall.engine.models import Finding
 
-# ALLOW-LIST: text is copied ONLY from tags that render visibly.
-# Anything not listed here (unknown, future, or exotic tags) is dropped.
 VISIBLE_TEXT_TAGS = {
     "[document]", "html", "body", "div", "p", "span", "a", "pre", "code",
     "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li", "dl", "dt", "dd",
@@ -23,7 +20,7 @@ def _extract_visible_text(soup) -> str:
     parts = []
     for text_node in soup.find_all(string=True):
         if type(text_node) is not NavigableString:
-            continue  # skips Comment, Doctype, CData, etc.
+            continue
         parent = text_node.parent
         name = getattr(parent, "name", "[document]")
         if name in VISIBLE_TEXT_TAGS:
@@ -47,7 +44,6 @@ class Sanitizer:
                 load_remote_stylesheets=False
             )
         except Exception as e:
-            # FAIL CLOSED: without inlining we cannot trust class-based hiding.
             return (
                 "[EMAIL BLOCKED DUE TO CSS PROCESSING ERROR]",
                 [Finding(kind="scanner_crash", full_text=f"CSS inlining failed: {e}", fail_closed=True)]
@@ -88,8 +84,12 @@ class Sanitizer:
                 text_content = tag.get_text(separator=" ", strip=True)
                 if text_content:
                     classification = classify_hidden(text_content)
+                    if classification in ("hidden_instruction", "hidden_block_large"):
+                        kind = classification
+                    else:
+                        kind = reason
                     findings.append(Finding(
-                        kind=classification,
+                        kind=kind,
                         full_text=text_content,
                         position=f"inline_style ({reason})"
                     ))
@@ -98,13 +98,17 @@ class Sanitizer:
                         "display_none", "visibility_hidden", "mso_hide",
                         "clipped_box", "offscreen", "opacity_zero"
                     }
-                    child_tags = list(tag.find_all(recursive=False))
-                    if reason in hard_hides or not child_tags:
+                    if reason in hard_hides:
                         tag.clear()
                         if classification == "hidden_instruction":
                             tag.append("[BLOCKED_POTENTIAL_INJECTION]")
+                    else:
+                        # FIX: For soft hides, remove direct text nodes but leave child tags 
+                        # to be evaluated independently by the loop.
+                        for child in list(tag.children):
+                            if isinstance(child, NavigableString):
+                                child.extract()
 
-        # ALLOW-LIST extraction: only visibly-rendering tags contribute text
         clean_text = _extract_visible_text(soup)
         clean_text = self.invisible_scanner.strip_safe(clean_text)
         return clean_text, findings

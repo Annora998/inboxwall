@@ -63,7 +63,7 @@ class WallPipeline:
             for f in self.invisible_scanner.scan(html):
                 findings.append(Finding(
                     kind="tag_chars" if "E0000" in f["range"] else "zero_width_in_word",
-                    full_text=f"Found {f['count']} chars in {f['range']}",
+                    full_text=f.get("summary", f"{f['count']} invisible characters in {f['range']}"),
                     position="raw_html"
                 ))
             findings.extend(self.phrase_scanner.scan(norm_text))

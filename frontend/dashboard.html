@@ -7,37 +7,65 @@
 :root{--bg:#f8fafc;--surface:#fff;--border:#e2e8f0;--text:#0f172a;--muted:#64748b;--primary:#2563eb;--danger:#ef4444;--success:#22c55e;--warning:#eab308;}
 *{box-sizing:border-box}
 body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);height:100vh;display:flex;flex-direction:column;}
-header{background:var(--surface);border-bottom:1px solid var(--border);padding:0.9rem 1.5rem;display:flex;justify-content:space-between;align-items:center;}
-header h1{margin:0;font-size:1.2rem;font-weight:700;}
-header .tag{font-size:0.8rem;color:var(--muted);}
+header{background:var(--surface);border-bottom:1px solid var(--border);padding:0.8rem 1.5rem;display:flex;justify-content:space-between;align-items:center;}
+header h1{margin:0;font-size:1.15rem;font-weight:700;}
+header .tag{font-size:0.78rem;color:var(--muted);}
+#stats-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:0.55rem 1.5rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;font-size:0.8rem;}
+#stats-text{font-weight:600;}
+.stat-chip{background:#eef2ff;color:#3730a3;border-radius:999px;padding:0.12rem 0.6rem;font-size:0.72rem;font-weight:600;}
+#sync-info{margin-left:auto;color:var(--muted);font-size:0.74rem;}
 main{flex:1;display:flex;overflow:hidden;}
-aside{width:360px;background:var(--surface);border-right:1px solid var(--border);overflow-y:auto;}
-.email-item{padding:0.9rem 1rem;border-bottom:1px solid var(--border);cursor:pointer;}
+aside{width:380px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;}
+.controls{padding:0.7rem 0.8rem;border-bottom:1px solid var(--border);}
+#search{width:100%;padding:0.45rem 0.6rem;border:1px solid var(--border);border-radius:0.35rem;font-size:0.82rem;margin-bottom:0.5rem;}
+.tabs{display:flex;gap:0.35rem;}
+.tab{border:1px solid var(--border);background:#fff;border-radius:999px;padding:0.2rem 0.65rem;font-size:0.72rem;cursor:pointer;color:var(--muted);font-weight:600;}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;}
+#email-list{flex:1;overflow-y:auto;}
+.email-item{padding:0.8rem 0.9rem;border-bottom:1px solid var(--border);cursor:pointer;}
 .email-item:hover{background:#f1f5f9;}
 .email-item.active{background:#eff6ff;border-left:3px solid var(--primary);}
-.email-subject{font-weight:600;font-size:0.9rem;margin-bottom:0.2rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.email-sender{font-size:0.78rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.email-date{font-size:0.72rem;color:var(--muted);margin-top:0.3rem;}
-.badge{display:inline-block;padding:0.15rem 0.5rem;border-radius:0.25rem;font-size:0.68rem;font-weight:700;margin-top:0.4rem;}
+.email-subject{font-weight:600;font-size:0.88rem;margin-bottom:0.15rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.email-sender{font-size:0.76rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.email-meta{display:flex;gap:0.4rem;align-items:center;margin-top:0.35rem;flex-wrap:wrap;}
+.email-date{font-size:0.7rem;color:var(--muted);}
+.badge{display:inline-block;padding:0.12rem 0.45rem;border-radius:0.25rem;font-size:0.66rem;font-weight:700;}
 .badge-CLEAN{background:#dcfce7;color:#166534;}
 .badge-CLEANED{background:#fef9c3;color:#854d0e;}
 .badge-LOCKED_AWAY{background:#fee2e2;color:#991b1b;}
-section{flex:1;padding:1.5rem 2rem;overflow-y:auto;}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:0.5rem;padding:1.2rem 1.4rem;margin-bottom:1.2rem;}
-.card h3{margin:0 0 0.8rem 0;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);}
-.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.6rem 1.5rem;font-size:0.85rem;}
-.meta-grid .k{color:var(--muted);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.04em;}
+.badge-RELEASED{background:#dbeafe;color:#1e40af;}
+.badge-demo{background:#e2e8f0;color:#334155;}
+.chip{background:#f1f5f9;border:1px solid var(--border);color:#475569;border-radius:999px;padding:0.08rem 0.5rem;font-size:0.66rem;}
+section{flex:1;padding:1.4rem 1.8rem;overflow-y:auto;}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:0.5rem;padding:1.1rem 1.3rem;margin-bottom:1.1rem;}
+.card h3{margin:0 0 0.7rem 0;font-size:0.76rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.55rem 1.4rem;font-size:0.83rem;}
+.meta-grid .k{color:var(--muted);font-size:0.68rem;text-transform:uppercase;letter-spacing:0.04em;}
 .meta-grid .v{margin-top:0.1rem;word-break:break-all;}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;}
+.explain{margin-top:0.7rem;font-size:0.8rem;color:#475569;background:#f8fafc;border:1px dashed var(--border);border-radius:0.35rem;padding:0.5rem 0.7rem;}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;}
 @media(max-width:1100px){.split{grid-template-columns:1fr;}}
-pre.pane{white-space:pre-wrap;word-break:break-word;font-family:Consolas,Menlo,monospace;font-size:0.82rem;background:#f8fafc;border:1px solid var(--border);border-radius:0.35rem;padding:0.9rem;max-height:42vh;overflow:auto;margin:0;}
+pre.pane{white-space:pre-wrap;word-break:break-word;font-family:Consolas,Menlo,monospace;font-size:0.8rem;background:#f8fafc;border:1px solid var(--border);border-radius:0.35rem;padding:0.85rem;max-height:40vh;overflow:auto;margin:0;}
 pre.original{background:#1e293b;color:#e2e8f0;border-color:#334155;}
-.lock-banner{background:#fee2e2;border:1px solid #fecaca;color:#991b1b;border-radius:0.4rem;padding:0.7rem 1rem;font-size:0.85rem;margin-bottom:1.2rem;}
-.error-banner{background:#fef3c7;border:1px solid #fde68a;color:#92400e;border-radius:0.4rem;padding:0.7rem 1rem;font-size:0.85rem;margin-bottom:1.2rem;}
-.threat-item{background:#fef2f2;border:1px solid #fecaca;border-radius:0.35rem;padding:0.7rem 0.9rem;margin-bottom:0.6rem;}
-.threat-kind{font-weight:700;font-size:0.78rem;color:var(--danger);}
-.threat-pos{font-size:0.72rem;color:var(--muted);margin-left:0.5rem;font-weight:400;}
-.threat-text{font-family:Consolas,Menlo,monospace;font-size:0.8rem;word-break:break-all;margin-top:0.4rem;white-space:pre-wrap;}
+span.inv{background:#7c3aed;color:#fff;border-radius:3px;padding:0 2px;}
+span.hl{background:#7f1d1d;color:#fecaca;border-radius:3px;}
+.banner{border-radius:0.4rem;padding:0.65rem 0.9rem;font-size:0.83rem;margin-bottom:1.1rem;}
+.banner-lock{background:#fee2e2;border:1px solid #fecaca;color:#991b1b;}
+.banner-released{background:#dbeafe;border:1px solid #bfdbfe;color:#1e40af;}
+.banner-reported{background:#fef9c3;border:1px solid #fde68a;color:#854d0e;}
+.banner-error{background:#fef3c7;border:1px solid #fde68a;color:#92400e;}
+.actions{display:flex;gap:0.5rem;flex-wrap:wrap;}
+.btn{border:1px solid var(--border);border-radius:0.35rem;padding:0.4rem 0.8rem;font-size:0.78rem;font-weight:600;cursor:pointer;background:#fff;}
+.btn-danger{background:#dc2626;border-color:#dc2626;color:#fff;}
+.btn-primary{background:var(--primary);border-color:var(--primary);color:#fff;}
+.action-msg{margin-top:0.6rem;font-size:0.78rem;color:#334155;}
+.threat-item{background:#fef2f2;border:1px solid #fecaca;border-radius:0.35rem;padding:0.65rem 0.85rem;margin-bottom:0.55rem;}
+.threat-kind{font-weight:700;font-size:0.76rem;color:var(--danger);}
+.threat-pos{font-size:0.7rem;color:var(--muted);margin-left:0.4rem;font-weight:400;}
+.threat-text{font-family:Consolas,Menlo,monospace;font-size:0.78rem;word-break:break-all;margin-top:0.35rem;white-space:pre-wrap;}
+.pane-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.7rem;}
+.pane-head h3{margin:0;}
+.mini-btn{border:1px solid var(--border);background:#fff;border-radius:0.3rem;padding:0.2rem 0.55rem;font-size:0.7rem;cursor:pointer;color:#475569;}
 </style>
 </head>
 <body>
@@ -45,16 +73,34 @@ pre.original{background:#1e293b;color:#e2e8f0;border-color:#334155;}
   <h1>InBox Wall <span style="color:var(--primary)">Dashboard</span></h1>
   <span class="tag">Local-First &amp; Secure - human audit view</span>
 </header>
+<div id="stats-bar">
+  <span id="stats-text">Loading stats...</span>
+  <span id="stats-chips" style="display:contents"></span>
+  <span id="sync-info"></span>
+</div>
 <main>
-  <aside id="email-list"><div style="padding:1rem;color:var(--muted)">Loading...</div></aside>
+  <aside>
+    <div class="controls">
+      <input id="search" type="text" placeholder="Search subject or sender..." autocomplete="off">
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-f="ALL">All</button>
+        <button class="tab" data-f="CLEAN">Clean</button>
+        <button class="tab" data-f="CLEANED">Cleaned</button>
+        <button class="tab" data-f="LOCKED_AWAY">Locked</button>
+      </div>
+    </div>
+    <div id="email-list"><div style="padding:1rem;color:var(--muted)">Loading...</div></div>
+  </aside>
   <section id="email-detail">
     <div id="empty-state" style="text-align:center;color:var(--muted);margin-top:18vh">Select an email to inspect it.</div>
     <div id="detail-content" style="display:none">
-      <div id="lock-banner" class="lock-banner" style="display:none"></div>
-      <div id="error-banner" class="error-banner" style="display:none"></div>
+      <div id="lock-banner" class="banner banner-lock" style="display:none"></div>
+      <div id="released-banner" class="banner banner-released" style="display:none"></div>
+      <div id="reported-banner" class="banner banner-reported" style="display:none"></div>
+      <div id="error-banner" class="banner banner-error" style="display:none"></div>
       <div class="card">
-        <h2 id="d-subject" style="margin:0 0 0.6rem 0;font-size:1.15rem"></h2>
-        <div style="margin-bottom:0.8rem"><span id="d-verdict" class="badge"></span></div>
+        <h2 id="d-subject" style="margin:0 0 0.55rem 0;font-size:1.1rem"></h2>
+        <div style="margin-bottom:0.7rem;display:flex;gap:0.4rem;align-items:center" id="d-badges"></div>
         <div class="meta-grid">
           <div><div class="k">From</div><div class="v" id="d-sender"></div></div>
           <div><div class="k">Received</div><div class="v" id="d-received"></div></div>
@@ -62,19 +108,32 @@ pre.original{background:#1e293b;color:#e2e8f0;border-color:#334155;}
           <div><div class="k">Threat score</div><div class="v" id="d-score"></div></div>
           <div><div class="k">Rules version</div><div class="v" id="d-rules"></div></div>
         </div>
+        <div id="d-explain" class="explain" style="display:none"></div>
       </div>
       <div class="split">
         <div class="card">
-          <h3 style="color:var(--danger)">Quarantined original (source, never executed)</h3>
+          <div class="pane-head">
+            <h3 style="color:var(--danger)">Quarantined original (X-ray view, never executed)</h3>
+            <button id="btn-delorig" class="mini-btn" style="display:none">Delete original</button>
+          </div>
           <pre id="d-original" class="pane original"></pre>
         </div>
         <div class="card">
-          <h3 style="color:var(--success)">Safe copy (what the AI sees)</h3>
+          <div class="pane-head"><h3 style="color:var(--success)">Safe copy (what AI tools receive)</h3></div>
           <pre id="d-body" class="pane"></pre>
         </div>
       </div>
+      <div id="actions-card" class="card" style="display:none">
+        <h3>Human review actions (recorded in the local audit log)</h3>
+        <div class="actions">
+          <button id="btn-keep" class="btn btn-danger">Keep locked</button>
+          <button id="btn-release" class="btn btn-primary">Release after review</button>
+          <button id="btn-report" class="btn">Report false positive</button>
+        </div>
+        <div id="action-msg" class="action-msg" style="display:none"></div>
+      </div>
       <div id="threats-card" class="card" style="display:none">
-        <h3 style="color:var(--danger)">Threat vault - removed or flagged content</h3>
+        <h3 style="color:var(--danger)">Threat vault - what was removed or flagged, and why</h3>
         <div id="d-threats"></div>
       </div>
     </div>
@@ -82,8 +141,16 @@ pre.original{background:#1e293b;color:#e2e8f0;border-color:#334155;}
 </main>
 <script>
 const API_TOKEN = "{{API_TOKEN}}";
-async function fetchAPI(url){
-  const res = await fetch(url, {headers:{Authorization:`Bearer ${API_TOKEN}`}});
+const TAB_NAMES = {ALL:"All", CLEAN:"Clean", CLEANED:"Cleaned", LOCKED_AWAY:"Locked"};
+let allEmails = [];
+let filter = "ALL";
+let query = "";
+let currentId = null;
+
+async function fetchAPI(url, opts){
+  const headers = {Authorization:`Bearer ${API_TOKEN}`};
+  if(opts && opts.body) headers["Content-Type"] = "application/json";
+  const res = await fetch(url, Object.assign({headers}, opts || {}));
   if(!res.ok) throw new Error("API error " + res.status);
   return res.json();
 }
@@ -92,57 +159,134 @@ function fmtDate(iso){
   const d = new Date(iso);
   return isNaN(d) ? iso : d.toLocaleString();
 }
-async function loadEmails(){
-  const list = document.getElementById("email-list");
+async function loadStats(){
   try{
-    const emails = await fetchAPI("/api/emails");
-    list.innerHTML = "";
-    if(!emails.length){
-      list.innerHTML = '<div style="padding:1rem;color:var(--muted)">No emails yet. Run the processor or scripts/seed_demo.py.</div>';
-      return;
-    }
-    emails.forEach(email=>{
-      const div = document.createElement("div");
-      div.className = "email-item";
-      const sub = document.createElement("div"); sub.className = "email-subject"; sub.textContent = email.subject || "(no subject)";
-      const sen = document.createElement("div"); sen.className = "email-sender"; sen.textContent = email.sender || "";
-      const dt = document.createElement("div"); dt.className = "email-date"; dt.textContent = fmtDate(email.received_at);
-      const badge = document.createElement("span"); badge.className = "badge badge-" + email.verdict; badge.textContent = email.verdict;
-      div.append(sub, sen, dt, badge);
-      div.onclick = () => loadEmail(email.id, div);
-      list.appendChild(div);
+    const s = await fetchAPI("/api/stats");
+    document.getElementById("stats-text").textContent = s.blocked_week + " threat findings blocked this week";
+    const chips = document.getElementById("stats-chips");
+    chips.innerHTML = "";
+    ["AI manipulation","Data theft","Mail forwarding","Obfuscation","Hidden content"].forEach(name=>{
+      const n = (s.by_intent || {})[name];
+      if(n){ const c = document.createElement("span"); c.className = "stat-chip"; c.textContent = name + ": " + n; chips.appendChild(c); }
     });
+    document.getElementById("sync-info").textContent = "Mailbox: " + (s.mailbox || "not synced yet") + "  ·  Last sync: " + (s.last_sync ? fmtDate(s.last_sync) : "never");
+  }catch(e){ document.getElementById("stats-text").textContent = "Stats unavailable"; }
+}
+function renderList(){
+  const list = document.getElementById("email-list");
+  list.innerHTML = "";
+  const counts = {ALL: allEmails.length, CLEAN:0, CLEANED:0, LOCKED_AWAY:0, RELEASED:0};
+  allEmails.forEach(e=>{ counts[e.verdict] = (counts[e.verdict]||0)+1; });
+  document.querySelectorAll(".tab").forEach(t=>{
+    const f = t.dataset.f;
+    t.textContent = TAB_NAMES[f] + " (" + (counts[f]||0) + ")";
+    t.classList.toggle("active", f === filter);
+  });
+  const q = query.trim().toLowerCase();
+  const shown = allEmails.filter(e=>{
+    if(filter !== "ALL" && e.verdict !== filter) return false;
+    if(q && !(((e.subject||"") + " " + (e.sender||"")).toLowerCase().includes(q))) return false;
+    return true;
+  });
+  if(!shown.length){ list.innerHTML = '<div style="padding:1rem;color:var(--muted)">No emails match.</div>'; return; }
+  shown.forEach(email=>{
+    const div = document.createElement("div");
+    div.className = "email-item";
+    div.dataset.id = email.id;
+    const sub = document.createElement("div"); sub.className = "email-subject"; sub.textContent = email.subject || "(no subject)";
+    const sen = document.createElement("div"); sen.className = "email-sender"; sen.textContent = email.sender || "";
+    const meta = document.createElement("div"); meta.className = "email-meta";
+    const badge = document.createElement("span"); badge.className = "badge badge-" + email.verdict; badge.textContent = email.verdict;
+    meta.appendChild(badge);
+    if(email.is_demo){ const dm = document.createElement("span"); dm.className = "badge badge-demo"; dm.textContent = "DEMO"; meta.appendChild(dm); }
+    if(email.reason){ const ch = document.createElement("span"); ch.className = "chip"; ch.textContent = email.reason; meta.appendChild(ch); }
+    const dt = document.createElement("div"); dt.className = "email-date"; dt.textContent = fmtDate(email.received_at);
+    div.append(sub, sen, meta, dt);
+    div.onclick = () => loadEmail(email.id, div);
+    list.appendChild(div);
+  });
+}
+async function loadEmails(){
+  try{
+    allEmails = await fetchAPI("/api/emails");
+    renderList();
   }catch(e){
-    list.innerHTML = '<div style="padding:1rem;color:var(--muted)">Could not load emails. Check the API token.</div>';
+    document.getElementById("email-list").innerHTML = '<div style="padding:1rem;color:var(--muted)">Could not load emails. Check the API token.</div>';
   }
+  await loadStats();
+}
+function renderXray(pre, xray, fragments){
+  pre.textContent = "";
+  const matches = [];
+  const tokenRe = /\u27e6U\+[0-9A-F]{4}\u27e7/g;
+  let m;
+  while((m = tokenRe.exec(xray)) !== null) matches.push({s:m.index, e:m.index+m[0].length, cls:"inv"});
+  (fragments || []).forEach(frag=>{
+    if(!frag || frag.length < 4) return;
+    const idx = xray.indexOf(frag);
+    if(idx >= 0) matches.push({s:idx, e:idx+frag.length, cls:"hl"});
+  });
+  matches.sort((a,b)=>a.s-b.s);
+  const kept = [];
+  let last = -1;
+  for(const mm of matches){ if(mm.s >= last){ kept.push(mm); last = mm.e; } }
+  let pos = 0;
+  for(const mm of kept){
+    if(mm.s > pos) pre.appendChild(document.createTextNode(xray.slice(pos, mm.s)));
+    const span = document.createElement("span");
+    span.className = mm.cls;
+    span.textContent = xray.slice(mm.s, mm.e);
+    pre.appendChild(span);
+    pos = mm.e;
+  }
+  if(pos < xray.length) pre.appendChild(document.createTextNode(xray.slice(pos)));
 }
 async function loadEmail(id, itemEl){
+  currentId = id;
   document.querySelectorAll(".email-item").forEach(el=>el.classList.remove("active"));
   if(itemEl) itemEl.classList.add("active");
   document.getElementById("empty-state").style.display = "none";
   document.getElementById("detail-content").style.display = "block";
-  const err = document.getElementById("error-banner");
-  err.style.display = "none";
+  document.getElementById("error-banner").style.display = "none";
   try{
     const email = await fetchAPI(`/api/emails/${id}?include_threats=true`);
     document.getElementById("d-subject").textContent = email.subject || "(no subject)";
-    const v = document.getElementById("d-verdict");
-    v.className = "badge badge-" + email.verdict;
-    v.textContent = email.verdict;
+    const badges = document.getElementById("d-badges");
+    badges.innerHTML = "";
+    const v = document.createElement("span"); v.className = "badge badge-" + email.verdict; v.textContent = email.verdict; badges.appendChild(v);
+    if(email.is_demo){ const dm = document.createElement("span"); dm.className = "badge badge-demo"; dm.textContent = "DEMO DATA"; badges.appendChild(dm); }
+    if(email.review_status && email.review_status !== "locked"){ const rs = document.createElement("span"); rs.className = "chip"; rs.textContent = "review: " + email.review_status; badges.appendChild(rs); }
     document.getElementById("d-sender").textContent = email.sender || "-";
     document.getElementById("d-received").textContent = fmtDate(email.received_at);
     document.getElementById("d-msgid").textContent = email.message_id || "-";
-    document.getElementById("d-score").textContent = String(email.threat_score === null || email.threat_score === undefined ? 0 : email.threat_score);
+    document.getElementById("d-score").textContent = String(email.threat_score || 0);
     document.getElementById("d-rules").textContent = email.rules_version || "-";
+    const ex = document.getElementById("d-explain");
+    if(email.score_explanation){ ex.style.display = "block"; ex.textContent = "Score: " + email.score_explanation; }
+    else ex.style.display = "none";
     const lock = document.getElementById("lock-banner");
     if(email.verdict === "LOCKED_AWAY"){
       lock.style.display = "block";
-      lock.textContent = "This email was locked away by the wall. No AI can read it. You are viewing the quarantined original as a human auditor.";
+      lock.textContent = "This email is locked. It is not available to AI tools through InBox Wall. You are viewing the quarantined copy as a human auditor.";
+    } else lock.style.display = "none";
+    const rel = document.getElementById("released-banner");
+    if(email.review_status === "released"){ rel.style.display = "block"; rel.textContent = "Released after human review on this machine. It is now available to AI tools through InBox Wall."; }
+    else rel.style.display = "none";
+    const rep = document.getElementById("reported-banner");
+    if(email.review_status === "reported"){ rep.style.display = "block"; rep.textContent = "Reported as a false positive. A local export file was saved for your inspection before sharing."; }
+    else rep.style.display = "none";
+    const pre = document.getElementById("d-original");
+    const del = document.getElementById("btn-delorig");
+    if(email.original_html){
+      renderXray(pre, email.original_xray || email.original_html, (email.threats || []).map(t=>t.full_text));
+      del.style.display = "inline-block";
     }else{
-      lock.style.display = "none";
+      pre.textContent = "(original not stored, or deleted for privacy)";
+      del.style.display = "none";
     }
-    document.getElementById("d-original").textContent = email.original_html || "(original not stored)";
     document.getElementById("d-body").textContent = email.clean_body || "";
+    document.getElementById("actions-card").style.display = (email.verdict === "LOCKED_AWAY") ? "block" : "none";
+    document.getElementById("action-msg").style.display = "none";
     const tCard = document.getElementById("threats-card");
     const tList = document.getElementById("d-threats");
     tList.innerHTML = "";
@@ -150,22 +294,49 @@ async function loadEmail(id, itemEl){
       tCard.style.display = "block";
       email.threats.forEach(t=>{
         const box = document.createElement("div"); box.className = "threat-item";
-        const k = document.createElement("div"); k.className = "threat-kind";
-        k.textContent = t.finding_kind.toUpperCase();
+        const k = document.createElement("div"); k.className = "threat-kind"; k.textContent = t.label || t.finding_kind;
         const p = document.createElement("span"); p.className = "threat-pos"; p.textContent = "[" + (t.position || "") + "]";
         k.appendChild(p);
         const tx = document.createElement("div"); tx.className = "threat-text"; tx.textContent = t.full_text;
         box.append(k, tx);
         tList.appendChild(box);
       });
-    }else{
-      tCard.style.display = "none";
-    }
+    }else tCard.style.display = "none";
   }catch(e){
+    const err = document.getElementById("error-banner");
     err.style.display = "block";
     err.textContent = "Could not load this email. " + e.message;
   }
 }
+async function review(action){
+  if(!currentId) return;
+  if(action === "release" && !window.confirm("Release this email after your review? It will become available to AI tools through InBox Wall. This decision is written to the local audit log.")) return;
+  if(action === "report_false_positive" && !window.confirm("Export a false-positive report file to your local reports folder? Inspect the file before sharing anything.")) return;
+  try{
+    const data = await fetchAPI(`/api/emails/${currentId}/review`, {method:"POST", body: JSON.stringify({action})});
+    const msg = document.getElementById("action-msg");
+    msg.style.display = "block";
+    msg.textContent = data.file ? ("Report exported to: " + data.file) : ("Action recorded: " + data.status);
+    await loadEmails();
+    const el = document.querySelector(`.email-item[data-id="${currentId}"]`);
+    await loadEmail(currentId, el);
+  }catch(e){ alert("Review action failed: " + e.message); }
+}
+async function deleteOriginal(){
+  if(!currentId) return;
+  if(!window.confirm("Permanently delete the quarantined original for this email? The safe copy and vault findings remain.")) return;
+  try{
+    await fetchAPI(`/api/emails/${currentId}/delete_original`, {method:"POST"});
+    const el = document.querySelector(`.email-item[data-id="${currentId}"]`);
+    await loadEmail(currentId, el);
+  }catch(e){ alert("Delete failed: " + e.message); }
+}
+document.getElementById("search").addEventListener("input", ev=>{ query = ev.target.value; renderList(); });
+document.querySelectorAll(".tab").forEach(t=> t.onclick = ()=>{ filter = t.dataset.f; renderList(); });
+document.getElementById("btn-keep").onclick = ()=>review("keep_locked");
+document.getElementById("btn-release").onclick = ()=>review("release");
+document.getElementById("btn-report").onclick = ()=>review("report_false_positive");
+document.getElementById("btn-delorig").onclick = deleteOriginal;
 loadEmails();
 </script>
 </body>
