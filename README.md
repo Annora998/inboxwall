@@ -43,7 +43,7 @@ InBox Wall acts as a local security layer between your inbox and your AI.
 - **Host Header Validation:** Checks the Host header against allowed local addresses to prevent DNS rebinding attacks.
 - **Security Headers:** Enforces strict Content Security Policy (CSP), X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and Cache-Control headers on all responses.
 - **Locked Mail Protection:** Emails with a LOCKED_AWAY verdict are completely blocked from being returned by the API or MCP server.
-- **Untrusted-Content Envelope:** Every body handed to an AI is explicitly framed as data, never as instructions.
+- **Untrusted-Content Envelope:** Every body handed to an AI is explicitly framed as data, never as instructions, using cryptographically secure random nonces for boundaries to prevent delimiter spoofing attacks.
 
 ### Human Audit and Compliance
 - **X-Ray View:** The dashboard renders invisible characters as visible tokens (e.g., ⟦U+200B⟧) and highlights removed fragments in red within the quarantined original.
