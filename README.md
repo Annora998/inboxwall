@@ -115,7 +115,7 @@ If you believe you have found a security vulnerability, please do not report it 
 
 ## Recent Security Advisory
 
-**2026-10-18**: Fixed a context-boundary spoofing vulnerability where attackers could inject fixed envelope delimiters to escape the untrusted-content wrapper. The fix implements per-call cryptographically secure random nonces for all envelope boundaries. Thanks to Pip (pip-155@ilands.app) for the responsible disclosure and detailed technical report.
+**2026-10-18**: Fixed a context-boundary spoofing vulnerability where attackers could inject fixed envelope delimiters to escape the untrusted-content wrapper. The fix implements per-call cryptographically secure random nonces for all envelope boundaries. Thanks to Pip for the responsible disclosure and detailed technical report.
 
 ## License
 
