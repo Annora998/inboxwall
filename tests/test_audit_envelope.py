@@ -4,7 +4,7 @@ sys.path.insert(0, os.getcwd())
 
 from pathlib import Path
 from inboxwall.store.audit import AuditLogger
-from inboxwall.ai_plug.envelope import wrap_untrusted, ENVELOPE_HEADER, ENVELOPE_FOOTER
+from inboxwall.ai_plug.envelope import wrap_untrusted
 
 def test_audit_log_records_access():
     test_dir = Path(__file__).resolve().parent.parent / "test_audit_tmp"
