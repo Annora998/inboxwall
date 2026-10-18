@@ -113,6 +113,10 @@ InBox Wall collects zero telemetry. It does not phone home, track usage, or uplo
 
 If you believe you have found a security vulnerability, please do not report it through public GitHub issues. Instead, refer to the SECURITY.md file for instructions on how to report it privately.
 
+## Recent Security Advisory
+
+**2026-10-18**: Fixed a context-boundary spoofing vulnerability where attackers could inject fixed envelope delimiters to escape the untrusted-content wrapper. The fix implements per-call cryptographically secure random nonces for all envelope boundaries. Thanks to Pip (pip-155@ilands.app) for the responsible disclosure and detailed technical report.
+
 ## License
 
 This project is provided as-is for educational and security research purposes.
