@@ -115,6 +115,8 @@ If you believe you have found a security vulnerability, please do not report it 
 
 ## Recent Security Advisory
 
+**2026-10-19**: Hardened the CSS style parser against evasion. Fixed dead property checks (height, text-indent, font-size), added `max-height`/`overflow` and `clip-path` detection, and normalized color/clip regexes to prevent space-based bypasses. Thanks to **Sattyam Jain** for the detailed code review.
+
 **2026-10-18**: Fixed a context-boundary spoofing vulnerability where attackers could inject fixed envelope delimiters or literal marker phrases to trick consuming AI prompts. The fix implements per-call cryptographically secure random nonces for all boundaries, and actively scrubs both the nonce and literal marker phrases from the payload before wrapping. Thanks to **Pip** for the responsible disclosure and detailed technical reports.
 
 ## License
