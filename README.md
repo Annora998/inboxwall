@@ -43,7 +43,7 @@ InBox Wall acts as a local security layer between your inbox and your AI.
 - **Host Header Validation:** Checks the Host header against allowed local addresses to prevent DNS rebinding attacks.
 - **Security Headers:** Enforces strict Content Security Policy (CSP), X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and Cache-Control headers on all responses.
 - **Locked Mail Protection:** Emails with a LOCKED_AWAY verdict are completely blocked from being returned by the API or MCP server.
-- **Untrusted-Content Envelope:** Every body handed to an AI is explicitly framed as data, never as instructions, using cryptographically secure random nonces for boundaries to prevent delimiter spoofing attacks.
+- **Untrusted-Content Envelope:** Every body handed to an AI is explicitly framed as data using cryptographically secure, per-call random nonces. Additionally, literal marker phrases are actively neutralized in the payload to prevent semantic spoofing by poorly configured AI prompts
 
 ### Human Audit and Compliance
 - **X-Ray View:** The dashboard renders invisible characters as visible tokens (e.g., ⟦U+200B⟧) and highlights removed fragments in red within the quarantined original.
@@ -115,7 +115,7 @@ If you believe you have found a security vulnerability, please do not report it 
 
 ## Recent Security Advisory
 
-**2026-10-18**: Fixed a context-boundary spoofing vulnerability where attackers could inject fixed envelope delimiters to escape the untrusted-content wrapper. The fix implements per-call cryptographically secure random nonces for all envelope boundaries. Thanks to Pip for the responsible disclosure and detailed technical report.
+**2026-10-18**: Fixed a context-boundary spoofing vulnerability where attackers could inject fixed envelope delimiters or literal marker phrases to trick consuming AI prompts. The fix implements per-call cryptographically secure random nonces for all boundaries, and actively scrubs both the nonce and literal marker phrases from the payload before wrapping. Thanks to **Pip** for the responsible disclosure and detailed technical reports.
 
 ## License
 
