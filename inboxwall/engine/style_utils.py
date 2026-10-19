@@ -1,6 +1,22 @@
-"""InBox Wall v2 - Shared Style Utilities."""
+"""InBox Wall v2 - Shared Style Utilities (Production-Grade)."""
 import re
 import unicodedata
+
+# --- Helper Functions for Robust Parsing ---
+
+def _is_zero_value(val: str) -> bool:
+    """Checks if a CSS value is effectively zero, regardless of unit."""
+    if not val:
+        return False
+    return bool(re.fullmatch(r"0(px|%|em|pt|rem|ex|ch|vw|vh|vmin|vmax)?", val.strip()))
+
+def _normalize_color(color: str) -> str:
+    """Normalizes CSS colors by stripping spaces and lowercasing for exact matching."""
+    if not color:
+        return ""
+    return color.replace(" ", "").lower()
+
+# --- Core Functions ---
 
 def parse_style(style_str: str) -> dict:
     out = {}
@@ -42,7 +58,8 @@ def get_effective_style(tag):
                 effective[prop] = style_dict[prop]
                 break
 
-    for prop in ("position", "clip", "overflow", "height", "left", "top", "right", "bottom", "margin-left", "text-indent", "transform"):
+    for prop in ("position", "clip", "clip-path", "overflow", "height", "max-height", 
+                 "left", "top", "right", "bottom", "margin-left", "text-indent", "transform"):
         for style_dict in ancestors_styles:
             if prop in style_dict:
                 effective[prop] = style_dict[prop]
@@ -51,62 +68,95 @@ def get_effective_style(tag):
     return effective
 
 def hidden_reason(style_dict: dict) -> str:
-    if style_dict.get("display") == "none": return "display_none"
-    if style_dict.get("visibility") in ("hidden", "collapse"): return "visibility_hidden"
+    # 1. Standard Visibility Checks
+    if style_dict.get("display") == "none": 
+        return "display_none"
+    if style_dict.get("visibility") in ("hidden", "collapse"): 
+        return "visibility_hidden"
 
-    color = style_dict.get("color", "")
-    bg_color = style_dict.get("background-color", "")
+    # 2. Color & Transparency Checks
+    color_raw = style_dict.get("color", "")
+    color = _normalize_color(color_raw)
+    bg_color = _normalize_color(style_dict.get("background-color", ""))
 
-    if color == "transparent" or ("rgba" in color and ",0)" in color.replace(" ", "")):
+    if color == "transparent":
         return "transparent_text"
 
-    # Fixed typo and added rgb/rgba variations
+    # FIXED: Changed rgba?\( to rgba\( to prevent false positives on rgb(255, 255, 0)
+    if re.search(r"rgba\([^)]*,\s*0(?:\.0+)?\s*\)", color_raw):
+        return "transparent_text"
+        
+    # Modern syntax: rgb(0 0 0 / 0)
+    if re.search(r"rgba?\([^)]*/\s*0(?:\.0+)?\s*\)", color_raw):
+        return "transparent_text"
+
     light_colors = {"white", "#fff", "#ffffff", "#fffff", "#fefefe", "#fffffe", 
-                    "rgb(255,255,255)", "rgba(255,255,255,0)", "rgba(0,0,0,0)", "rgba(0, 0, 0, 0)"}
+                    "rgb(255,255,255)", "rgba(255,255,255,0)", "rgba(0,0,0,0)"}
     if color in light_colors and bg_color in light_colors:
         return "white_on_white"
 
-    if style_dict.get("mso-hide") == "all": return "mso_hide"
+    if style_dict.get("mso-hide") == "all": 
+        return "mso_hide"
     
-    # Added height:0px/%, transform:scale(0)
-    if re.search(r"height\s*:\s*0(px|%)?", style_dict.get("height", "")): return "clipped_box"
-    if "scale(0)" in style_dict.get("transform", ""): return "clipped_box"
-    if "clip:rect(0,0,0,0)" in style_dict.get("clip", "") or "rect(0,0,0,0)" in style_dict.get("clip", ""): 
+    # 3. Clipping & Sizing Checks
+    height_val = style_dict.get("height", "").strip()
+    max_height_val = style_dict.get("max-height", "").strip()
+    overflow_val = style_dict.get("overflow", "").strip()
+    
+    if _is_zero_value(height_val): 
+        return "clipped_box"
+        
+    if _is_zero_value(max_height_val) and overflow_val in ("hidden", "clip", "auto"):
         return "clipped_box"
 
-    for prop in ["left", "top", "right", "bottom", "margin-left"]:
-        val = style_dict.get(prop, "")
-        m = re.fullmatch(r"(-?[\d.]+)(px|pt|em|rem)?", val)
+    if "scale(0)" in style_dict.get("transform", ""): 
+        return "clipped_box"
+
+    clip_val = style_dict.get("clip", "").strip()
+    if re.search(r"rect\s*\(\s*0\s*[,\s]\s*0\s*[,\s]\s*0\s*[,\s]\s*0\s*\)", clip_val): 
+        return "clipped_box"
+
+    clip_path = style_dict.get("clip-path", "").strip()
+    if "inset(100%)" in clip_path or "circle(0" in clip_path:
+        return "clipped_box"
+
+    # 4. Offscreen Checks
+    for prop in ["left", "top", "right", "bottom", "margin-left", "text-indent"]:
+        val = style_dict.get(prop, "").strip()
+        m = re.fullmatch(r"(-?[\d.]+)(px|pt|em|rem|%)?", val)
         if m:
             try:
                 num = float(m.group(1))
                 unit = m.group(2) or "px"
                 if unit == "px" and num <= -500: return "offscreen"
                 if unit in ("em", "rem") and num <= -50: return "offscreen"
+                if unit == "%" and num <= -100: return "offscreen"
             except ValueError:
                 pass
 
-    # Added text-indent check
-    if re.search(r"text-indent\s*:\s*-?\d{4,}px", style_dict.get("text-indent", "")):
-        return "offscreen"
-
+    # 5. Opacity Check
     try:
-        if float(style_dict.get("opacity", "1")) <= 0.05: return "opacity_zero"
+        if float(style_dict.get("opacity", "1")) <= 0.05: 
+            return "opacity_zero"
     except ValueError:
         pass
 
-    # Added font-size:0% check
-    font_size = style_dict.get("font-size", "")
-    if re.search(r"font-size\s*:\s*0(px|%)?", font_size): return "tiny_font"
-    m = re.fullmatch(r"([\d.]+)(px|pt|em|rem)?", font_size)
+    # 6. Font Size Check
+    font_size = style_dict.get("font-size", "").strip()
+    if _is_zero_value(font_size): 
+        return "tiny_font"
+
+    m = re.fullmatch(r"([\d.]+)(px|pt|em|rem|%)?", font_size)
     if m:
         try:
             val = float(m.group(1))
             unit = m.group(2) or "px"
             if unit in ("px", "pt") and val < 2: return "tiny_font"
             elif unit in ("em", "rem") and val < 0.1: return "tiny_font"
+            elif unit == "%" and val < 10: return "tiny_font"
         except ValueError:
-            return ""
+            pass
+            
     return ""
 
 def normalize_text(text: str) -> str:
